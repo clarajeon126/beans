@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         
         //bean stuff
         beans.layer.cornerRadius = beans.frame.height/2
-        beans.layer.shadowOffset = CGSize(width: 0.0, height: -3.0)
+        beans.layer.shadowOffset = CGSize(width: 5, height: 5)
         beans.layer.shadowRadius = 5
         beans.layer.shadowOpacity = 1.0
         beans.layer.shadowColor = CGColor(red: 163, green: 229, blue: 243, alpha: 1.0)

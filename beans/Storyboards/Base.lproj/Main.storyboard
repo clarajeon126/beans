@@ -39,9 +39,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="227-cM-LrL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="30"/>
                                 <color key="tintColor" red="0.80784313725490198" green="0.91764705882352937" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Beans">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.63921568627450975" green="0.89803921568627454" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -55,7 +55,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="E7g-dW-ZSU"/>
                                 </constraints>
-                                <state key="normal" title="Bookmarks">
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="30"/>
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.98431372549019602" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -69,27 +70,68 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="0ma-Lv-Bd9"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="3yo-05-7qD" kind="presentation" modalPresentationStyle="fullScreen" id="4dz-AE-Vw1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFR-pS-re3">
+                                <rect key="frame" x="112" y="705" width="202" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="6jl-9H-teU"/>
+                                    <constraint firstAttribute="width" constant="202" id="ik8-uo-cyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bookmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw9-Nf-1AP">
+                                <rect key="frame" x="100" y="559" width="149" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="g95-x3-EGS"/>
+                                    <constraint firstAttribute="width" constant="149" id="nJP-FH-xNn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuM-kq-nFv">
+                                <rect key="frame" x="230" y="421" width="83.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Fyo-h3-6g8"/>
+                                    <constraint firstAttribute="width" constant="83.5" id="sBs-na-kCR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Af-t5-ZdA"/>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="RXP-xm-zSz" firstAttribute="top" secondItem="VuM-kq-nFv" secondAttribute="bottom" constant="50.5" id="1CB-XT-C7h"/>
+                            <constraint firstItem="8Af-t5-ZdA" firstAttribute="trailing" secondItem="RXP-xm-zSz" secondAttribute="trailing" constant="100" id="8Ln-dn-msp"/>
                             <constraint firstItem="Bsx-rl-bWa" firstAttribute="top" secondItem="e24-HG-UdQ" secondAttribute="bottom" constant="50" id="A6S-b3-e8u"/>
                             <constraint firstAttribute="trailing" secondItem="Bsx-rl-bWa" secondAttribute="trailing" constant="-100" id="BbX-Ro-EUW"/>
                             <constraint firstItem="RXP-xm-zSz" firstAttribute="top" secondItem="Bsx-rl-bWa" secondAttribute="bottom" constant="35" id="DLT-Br-9Rv"/>
+                            <constraint firstItem="VuM-kq-nFv" firstAttribute="leading" secondItem="8Af-t5-ZdA" secondAttribute="leading" constant="230" id="FeS-g2-3OI"/>
                             <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="RXP-xm-zSz" secondAttribute="width" id="Iz1-iL-agB"/>
+                            <constraint firstItem="8Af-t5-ZdA" firstAttribute="trailing" secondItem="gw9-Nf-1AP" secondAttribute="trailing" constant="165" id="M41-gI-Wp2"/>
                             <constraint firstItem="RXP-xm-zSz" firstAttribute="leading" secondItem="14C-hK-OWx" secondAttribute="leading" constant="-100" id="RKk-yh-yhf"/>
                             <constraint firstItem="7YG-W7-5K3" firstAttribute="top" secondItem="RXP-xm-zSz" secondAttribute="bottom" constant="30" id="Ssf-ON-7XM"/>
                             <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="7YG-W7-5K3" secondAttribute="width" id="Udh-Ob-eB4"/>
+                            <constraint firstItem="gw9-Nf-1AP" firstAttribute="top" secondItem="Bsx-rl-bWa" secondAttribute="bottom" constant="56.5" id="UlQ-h2-mk3"/>
                             <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="14C-hK-OWx" secondAttribute="width" id="XdB-6K-rbH"/>
                             <constraint firstAttribute="trailing" secondItem="7YG-W7-5K3" secondAttribute="trailing" constant="-100" id="bNJ-Hn-PkT"/>
+                            <constraint firstItem="Bsx-rl-bWa" firstAttribute="leading" secondItem="8Af-t5-ZdA" secondAttribute="leading" constant="100" id="cmy-d4-CEJ"/>
                             <constraint firstItem="e24-HG-UdQ" firstAttribute="top" secondItem="8Af-t5-ZdA" secondAttribute="top" constant="50" id="cnd-1E-tzO"/>
                             <constraint firstItem="e24-HG-UdQ" firstAttribute="centerX" secondItem="14C-hK-OWx" secondAttribute="centerX" id="k3Q-r6-G7i"/>
+                            <constraint firstItem="YFR-pS-re3" firstAttribute="top" secondItem="RXP-xm-zSz" secondAttribute="bottom" constant="57.5" id="pmv-rR-xfY"/>
                             <constraint firstItem="e24-HG-UdQ" firstAttribute="width" secondItem="14C-hK-OWx" secondAttribute="width" multiplier="0.6" id="vZS-Bm-6Ny"/>
+                            <constraint firstItem="8Af-t5-ZdA" firstAttribute="trailing" secondItem="YFR-pS-re3" secondAttribute="trailing" constant="100" id="vgW-rA-3q2"/>
                         </constraints>
                     </view>
                     <connections>
