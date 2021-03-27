@@ -15,9 +15,13 @@ class BeanPickerSingleViewController: UIViewController {
     
     @IBOutlet var circleViewArray: [UIView]!
     
+    @IBOutlet weak var buttonToAr: UIButton!
+    
+    @IBOutlet weak var mainBeanImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         //make it a circular button
         buttonHome.layer.cornerRadius = buttonHome.frame.width / 2
         
