@@ -9,9 +9,27 @@ import UIKit
 
 class RecommendationsViewController: UIViewController {
 
+    @IBOutlet var beanButtons: [UIButton]!
+    
+    var beanPressed = ""
+    @IBAction func artBeanTapped(_ sender: Any) {
+        let bean = beanButtons[0]
+        bean.layer.borderWidth = 2
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for x in 0..<beanButtons.count {
+            let beanInQuestion = beanButtons[x]
+            
+            beanInQuestion.layer.cornerRadius = beanInQuestion.frame.height / 2
+            
+            beanInQuestion.layer.borderColor = UIColor.white.cgColor
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
     

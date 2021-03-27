@@ -15,16 +15,149 @@
                     <view key="view" contentMode="scaleToFill" id="qGN-gV-FBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bean?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-lb-EsX">
+                                <rect key="frame" x="41.5" y="182" width="46" height="37.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q6i-M9-lwc">
+                                <rect key="frame" x="41.5" y="224.5" width="331" height="136"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-pZ-RXM">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="58"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-9R-frX">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="58"/>
+                                                <color key="backgroundColor" red="0.77647058820000003" green="0.79215686269999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="artbean">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="artBeanTapped:" destination="viu-Hh-Son" eventType="touchUpInside" id="CaZ-ka-we9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iv-7b-Uh9">
+                                                <rect key="frame" x="175.5" y="0.0" width="155.5" height="58"/>
+                                                <color key="backgroundColor" red="0.59215686270000001" green="0.85882352939999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="chembean">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-z5-rNJ">
+                                        <rect key="frame" x="0.0" y="78" width="331" height="58"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-zZ-53O">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="58"/>
+                                                <color key="backgroundColor" red="0.53725490200000003" green="0.69411764710000001" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="homebean">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYs-4m-94C">
+                                                <rect key="frame" x="175.5" y="0.0" width="155.5" height="58"/>
+                                                <color key="backgroundColor" red="0.81176470590000005" green="0.94117647059999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="item-histo bean">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recommend?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glB-SK-GC4">
+                                <rect key="frame" x="41.5" y="380.5" width="99" height="37.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-v3-AAl">
+                                <rect key="frame" x="169" y="627" width="77" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.94117647059999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="submit!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGw-el-wO2">
+                                <rect key="frame" x="15" y="49" width="83" height="83"/>
+                                <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dGw-el-wO2" secondAttribute="height" id="sJV-jn-1dt"/>
+                                </constraints>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-U4-3g5">
+                                <rect key="frame" x="25" y="59" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-Qz-8Gj">
+                                <rect key="frame" x="41.5" y="423" width="331" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftbean" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-l9-rwm">
+                                <rect key="frame" x="0.0" y="679" width="290" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OOJ-l9-rwm" secondAttribute="height" multiplier="683:512" id="wyv-bU-naL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5nQ-4X-TyQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.87450980392156863" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OOJ-l9-rwm" firstAttribute="width" secondItem="qGN-gV-FBj" secondAttribute="width" multiplier="0.7" id="Atx-LE-NU3"/>
+                            <constraint firstItem="7nt-Qz-8Gj" firstAttribute="leading" secondItem="glB-SK-GC4" secondAttribute="leading" id="DQi-96-VbZ"/>
+                            <constraint firstItem="glB-SK-GC4" firstAttribute="top" secondItem="Q6i-M9-lwc" secondAttribute="bottom" constant="20" id="HHa-Yi-m5f"/>
+                            <constraint firstItem="7nt-Qz-8Gj" firstAttribute="width" secondItem="Q6i-M9-lwc" secondAttribute="width" id="PlF-rR-eh8"/>
+                            <constraint firstItem="7nt-Qz-8Gj" firstAttribute="height" secondItem="qGN-gV-FBj" secondAttribute="height" multiplier="0.2" id="Q6e-bS-Oij"/>
+                            <constraint firstItem="OOJ-l9-rwm" firstAttribute="leading" secondItem="5nQ-4X-TyQ" secondAttribute="leading" id="SwE-4c-2Oq"/>
+                            <constraint firstItem="Q6i-M9-lwc" firstAttribute="top" secondItem="sBa-lb-EsX" secondAttribute="bottom" constant="5" id="TFd-tZ-a5j"/>
+                            <constraint firstItem="Q6i-M9-lwc" firstAttribute="width" secondItem="qGN-gV-FBj" secondAttribute="width" multiplier="0.8" id="do8-6S-t6i"/>
+                            <constraint firstItem="Q6i-M9-lwc" firstAttribute="leading" secondItem="sBa-lb-EsX" secondAttribute="leading" id="eQQ-ot-X4T"/>
+                            <constraint firstItem="dGw-el-wO2" firstAttribute="leading" secondItem="5nQ-4X-TyQ" secondAttribute="leading" constant="15" id="eXj-ks-gDC"/>
+                            <constraint firstItem="dGw-el-wO2" firstAttribute="top" secondItem="5nQ-4X-TyQ" secondAttribute="top" constant="5" id="iwm-iR-Zsc"/>
+                            <constraint firstAttribute="bottom" secondItem="OOJ-l9-rwm" secondAttribute="bottom" id="loT-CL-IEL"/>
+                            <constraint firstItem="dGw-el-wO2" firstAttribute="width" secondItem="qGN-gV-FBj" secondAttribute="width" multiplier="0.2" id="p0M-OU-yt3"/>
+                            <constraint firstItem="sBa-lb-EsX" firstAttribute="top" secondItem="dGw-el-wO2" secondAttribute="bottom" constant="50" id="uf6-Sz-EWX"/>
+                            <constraint firstItem="7nt-Qz-8Gj" firstAttribute="top" secondItem="glB-SK-GC4" secondAttribute="bottom" constant="5" id="vQa-U2-hhl"/>
+                            <constraint firstItem="Q6i-M9-lwc" firstAttribute="leading" secondItem="glB-SK-GC4" secondAttribute="leading" id="wjb-BF-Ul3"/>
+                            <constraint firstItem="Q6i-M9-lwc" firstAttribute="centerX" secondItem="qGN-gV-FBj" secondAttribute="centerX" id="xZK-eO-bh4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="beanButtons" destination="fbe-9R-frX" collectionClass="NSMutableArray" id="ZT7-dq-KWh"/>
+                        <outletCollection property="beanButtons" destination="4iv-7b-Uh9" collectionClass="NSMutableArray" id="Lyj-43-BcN"/>
+                        <outletCollection property="beanButtons" destination="R4M-zZ-53O" collectionClass="NSMutableArray" id="7gS-3a-so3"/>
+                        <outletCollection property="beanButtons" destination="FYs-4m-94C" collectionClass="NSMutableArray" id="yno-I4-KRC"/>
+                        <outletCollection property="beanButtons" destination="0e6-v3-AAl" collectionClass="NSMutableArray" id="d0X-Ja-jIU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mv-cI-z6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="175"/>
+            <point key="canvasLocation" x="231.8840579710145" y="174.77678571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="leftbean" width="683" height="512"/>
+        <image name="singlebean" width="683" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
