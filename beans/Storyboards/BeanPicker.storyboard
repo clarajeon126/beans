@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saI-VA-ror">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saI-VA-ror">
                                 <rect key="frame" x="15" y="49" width="83" height="83"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -57,6 +57,10 @@
                                     <segue destination="y9w-bT-ySf" kind="presentation" modalPresentationStyle="fullScreen" id="jsJ-Gf-NEL"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-30-M44">
+                                <rect key="frame" x="44" y="126" width="96" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r7M-P1-eMV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="singlebean" width="192.5" height="144.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
