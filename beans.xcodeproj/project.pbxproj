@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38D0D6C5FAA163D688C71698 /* Pods_beans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; };
 		850CF54C260F8E1A00FFFAA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */; };
 		850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF54D260F8E1A00FFFAA3 /* art.scnassets */; };
 		850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CF54F260F8E1A00FFFAA3 /* ViewController.swift */; };
@@ -15,7 +14,9 @@
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
 		8574471B260FA42F0015B42B /* BeanPickerSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574471A260FA42F0015B42B /* BeanPickerSingleViewController.swift */; };
-		8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */; };
+		8574471D260FAE300015B42B /* Pods_beans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; };
+		8574471E260FAE300015B42B /* Pods_beans.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8592B840260F91A200E6CA3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */; };
 		8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B844260F92A900E6CA3A /* artbean.storyboard */; };
 		8592B848260F92B400E6CA3A /* chembean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B847260F92B400E6CA3A /* chembean.storyboard */; };
 		8592B84B260F92BD00E6CA3A /* homebean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B84A260F92BD00E6CA3A /* homebean.storyboard */; };
@@ -34,6 +35,20 @@
 		8592B878260F952700E6CA3A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B877260F952700E6CA3A /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8574471F260FAE300015B42B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8574471E260FAE300015B42B /* Pods_beans.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		30323980E4CFA4637126BD0F /* Pods-beans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beans.debug.xcconfig"; path = "Target Support Files/Pods-beans/Pods-beans.debug.xcconfig"; sourceTree = "<group>"; };
 		65F7EBD5A154E765DD15B6AB /* Pods-beans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beans.release.xcconfig"; path = "Target Support Files/Pods-beans/Pods-beans.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +61,7 @@
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8574471A260FA42F0015B42B /* BeanPickerSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanPickerSingleViewController.swift; sourceTree = "<group>"; };
-		8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8592B844260F92A900E6CA3A /* artbean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = artbean.storyboard; sourceTree = "<group>"; };
 		8592B847260F92B400E6CA3A /* chembean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = chembean.storyboard; sourceTree = "<group>"; };
 		8592B84A260F92BD00E6CA3A /* homebean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homebean.storyboard; sourceTree = "<group>"; };
@@ -71,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D0D6C5FAA163D688C71698 /* Pods_beans.framework in Frameworks */,
+				8574471D260FAE300015B42B /* Pods_beans.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +122,7 @@
 		850CF54A260F8E1A00FFFAA3 /* beans */ = {
 			isa = PBXGroup;
 			children = (
-				8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */,
+				8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */,
 				850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */,
 				8592B876260F951400E6CA3A /* Resources */,
 				8592B843260F926D00E6CA3A /* View Controllers */,
@@ -205,6 +220,7 @@
 				850CF545260F8E1A00FFFAA3 /* Frameworks */,
 				850CF546260F8E1A00FFFAA3 /* Resources */,
 				322C2ED16A800D8234A1C91C /* [CP] Embed Pods Frameworks */,
+				8574471F260FAE300015B42B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,7 +272,7 @@
 				8592B867260F93B700E6CA3A /* Recommendations.storyboard in Resources */,
 				8592B84E260F92C500E6CA3A /* itemhistobean.storyboard in Resources */,
 				8592B84B260F92BD00E6CA3A /* homebean.storyboard in Resources */,
-				8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */,
+				8592B840260F91A200E6CA3A /* GoogleService-Info.plist in Resources */,
 				8592B861260F939100E6CA3A /* BeanPicker.storyboard in Resources */,
 				8592B864260F939F00E6CA3A /* Bookmark.storyboard in Resources */,
 				850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */,
@@ -475,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T675PC557V;
 				INFOPLIST_FILE = beans/Info.plist;
@@ -484,6 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "clara-jeon.beans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -495,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T675PC557V;
 				INFOPLIST_FILE = beans/Info.plist;
@@ -504,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "clara-jeon.beans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

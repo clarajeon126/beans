@@ -15,11 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-rl-bWa">
-                                <rect key="frame" x="96" y="393" width="420" height="110"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e24-HG-UdQ">
+                                <rect key="frame" x="83" y="94" width="248" height="248.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="j4c-Pf-5X6">
+                                        <rect key="frame" x="-50" y="-49.5" width="348" height="347.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="j4c-Pf-5X6" secondAttribute="height" id="8Nl-eq-yB9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="j4c-Pf-5X6" firstAttribute="centerX" secondItem="e24-HG-UdQ" secondAttribute="centerX" id="Lg1-W9-99d"/>
+                                    <constraint firstItem="j4c-Pf-5X6" firstAttribute="centerY" secondItem="e24-HG-UdQ" secondAttribute="centerY" id="R9F-kl-Mph"/>
+                                    <constraint firstItem="j4c-Pf-5X6" firstAttribute="width" secondItem="e24-HG-UdQ" secondAttribute="width" multiplier="1.4" id="Rsd-Jp-V1o"/>
+                                    <constraint firstAttribute="width" secondItem="e24-HG-UdQ" secondAttribute="height" id="cWj-Dy-Y2v"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-rl-bWa">
+                                <rect key="frame" x="100" y="392.5" width="414" height="110"/>
                                 <color key="backgroundColor" red="0.80784313725490198" green="0.91764705882352937" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="420" id="0ll-Qp-icb"/>
                                     <constraint firstAttribute="height" constant="110" id="227-cM-LrL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
@@ -29,48 +46,85 @@
                                     <color key="titleShadowColor" red="0.63921568627450975" green="0.89803921568627454" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="beans:" destination="DiL-6i-xPO" eventType="touchUpInside" id="U57-Ru-snX"/>
+                                    <segue destination="U95-iB-L1b" kind="presentation" modalPresentationStyle="fullScreen" id="Xjg-eR-Ikx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXP-xm-zSz">
-                                <rect key="frame" x="-39" y="537" width="420" height="110"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXP-xm-zSz">
+                                <rect key="frame" x="-100" y="537.5" width="414" height="110"/>
                                 <color key="backgroundColor" red="0.98431372549019602" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="E7g-dW-ZSU"/>
-                                    <constraint firstAttribute="width" constant="420" id="sSN-DZ-uix"/>
                                 </constraints>
                                 <state key="normal" title="Bookmarks">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="9lq-NA-agm" kind="presentation" modalPresentationStyle="fullScreen" id="oSB-ct-Qqu"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-W7-5K3">
-                                <rect key="frame" x="83" y="690" width="420" height="110"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-W7-5K3">
+                                <rect key="frame" x="100" y="677.5" width="414" height="110"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.87450980392156863" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="0ma-Lv-Bd9"/>
-                                    <constraint firstAttribute="width" constant="420" id="YJa-UG-Pho"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="3yo-05-7qD" kind="presentation" modalPresentationStyle="fullScreen" id="4dz-AE-Vw1"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="j4c-Pf-5X6">
-                                <rect key="frame" x="59" y="54" width="296" height="266"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Af-t5-ZdA"/>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="j4c-Pf-5X6" firstAttribute="centerX" secondItem="14C-hK-OWx" secondAttribute="centerX" id="QLW-Lr-UwJ"/>
+                            <constraint firstItem="Bsx-rl-bWa" firstAttribute="top" secondItem="e24-HG-UdQ" secondAttribute="bottom" constant="50" id="A6S-b3-e8u"/>
+                            <constraint firstAttribute="trailing" secondItem="Bsx-rl-bWa" secondAttribute="trailing" constant="-100" id="BbX-Ro-EUW"/>
+                            <constraint firstItem="RXP-xm-zSz" firstAttribute="top" secondItem="Bsx-rl-bWa" secondAttribute="bottom" constant="35" id="DLT-Br-9Rv"/>
+                            <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="RXP-xm-zSz" secondAttribute="width" id="Iz1-iL-agB"/>
+                            <constraint firstItem="RXP-xm-zSz" firstAttribute="leading" secondItem="14C-hK-OWx" secondAttribute="leading" constant="-100" id="RKk-yh-yhf"/>
+                            <constraint firstItem="7YG-W7-5K3" firstAttribute="top" secondItem="RXP-xm-zSz" secondAttribute="bottom" constant="30" id="Ssf-ON-7XM"/>
+                            <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="7YG-W7-5K3" secondAttribute="width" id="Udh-Ob-eB4"/>
+                            <constraint firstItem="Bsx-rl-bWa" firstAttribute="width" secondItem="14C-hK-OWx" secondAttribute="width" id="XdB-6K-rbH"/>
+                            <constraint firstAttribute="trailing" secondItem="7YG-W7-5K3" secondAttribute="trailing" constant="-100" id="bNJ-Hn-PkT"/>
+                            <constraint firstItem="e24-HG-UdQ" firstAttribute="top" secondItem="8Af-t5-ZdA" secondAttribute="top" constant="50" id="cnd-1E-tzO"/>
+                            <constraint firstItem="e24-HG-UdQ" firstAttribute="centerX" secondItem="14C-hK-OWx" secondAttribute="centerX" id="k3Q-r6-G7i"/>
+                            <constraint firstItem="e24-HG-UdQ" firstAttribute="width" secondItem="14C-hK-OWx" secondAttribute="width" multiplier="0.6" id="vZS-Bm-6Ny"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="beans" destination="Bsx-rl-bWa" id="grP-y5-V5s"/>
                         <outlet property="bookmarks" destination="RXP-xm-zSz" id="akO-7p-3Dm"/>
                         <outlet property="recommendations" destination="7YG-W7-5K3" id="ZjR-HV-cHg"/>
+                        <outlet property="whiteCircleView" destination="e24-HG-UdQ" id="DD2-dN-48H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrE-Rj-hYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.6956521739130448" y="-60.267857142857139"/>
+        </scene>
+        <!--BeanPicker-->
+        <scene sceneID="whk-vY-dix">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BeanPicker" id="U95-iB-L1b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hA1-Iv-G4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-92"/>
+        </scene>
+        <!--Bookmark-->
+        <scene sceneID="Wzh-k9-XLf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bookmark" id="9lq-NA-agm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3B-e0-uhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-9"/>
+        </scene>
+        <!--Recommendations-->
+        <scene sceneID="pqZ-Bg-xFE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recommendations" id="3yo-05-7qD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kG-ub-3Xz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="68"/>
         </scene>
     </scenes>
     <resources>

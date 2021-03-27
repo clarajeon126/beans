@@ -17,8 +17,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var recommendations: UIButton!
     
+    
+    @IBOutlet weak var whiteCircleView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //changing white view to a circle
+        whiteCircleView.layer.cornerRadius = whiteCircleView.frame.width / 2
         
         beans.layer.cornerRadius = beans.frame.height/2
         bookmarks.layer.cornerRadius = bookmarks.frame.height/2
