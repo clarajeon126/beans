@@ -9,13 +9,21 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var beans: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        beans.layer.cornerRadius = beans.frame.height/2
+        
+        
         // Do any additional setup after loading the view.
     }
     
 
+    
     /*
     // MARK: - Navigation
 
