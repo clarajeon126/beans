@@ -26,13 +26,30 @@ class HomeViewController: UIViewController {
         //changing white view to a circle
         whiteCircleView.layer.cornerRadius = whiteCircleView.frame.width / 2
         
+        //bean stuff
         beans.layer.cornerRadius = beans.frame.height/2
-        bookmarks.layer.cornerRadius = bookmarks.frame.height/2
-        recommendations.layer.cornerRadius = recommendations.frame.height/2
-        beans.layer.shadowOffset = CGSize(width: 5, height: 5)
-        beans.layer.shadowRadius = 10
+        beans.layer.shadowOffset = CGSize(width: 0.0, height: -3.0)
+        beans.layer.shadowRadius = 5
         beans.layer.shadowOpacity = 1.0
+        beans.layer.shadowColor = CGColor(red: 163, green: 229, blue: 243, alpha: 1.0)
         
+        //ookmarks stuff
+        
+        bookmarks.layer.cornerRadius = bookmarks.frame.height/2
+        bookmarks.layer.shadowOffset = CGSize(width: 5, height: 5)
+        bookmarks.layer.shadowRadius = 5
+        bookmarks.layer.shadowOpacity = 1.0
+        bookmarks.layer.shadowColor = CGColor(red: 251, green: 203, blue: 203, alpha: 1.0)
+        
+        
+        //recomendation stuff
+        recommendations.layer.cornerRadius = recommendations.frame.height/2
+        recommendations.layer.shadowOffset = CGSize(width: 5, height: 5)
+        recommendations.layer.shadowRadius = 5
+        recommendations.layer.shadowOpacity = 1.0
+       recommendations.layer.shadowColor = CGColor(red: 249, green: 207, blue: 44, alpha: 1.0)
+        
+       
         // Do any additional setup after loading the view.
     }
     

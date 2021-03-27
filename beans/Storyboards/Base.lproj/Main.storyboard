@@ -57,6 +57,7 @@
                                 </constraints>
                                 <state key="normal" title="Bookmarks">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.98431372549019602" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="9lq-NA-agm" kind="presentation" modalPresentationStyle="fullScreen" id="oSB-ct-Qqu"/>
