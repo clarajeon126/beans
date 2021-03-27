@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         //changing white view to a circle
-        whiteCircleView.layer.cornerRadius = whiteCircleView.frame.width / 2
+        whiteCircleView.layer.cornerRadius = whiteCircleView.frame.height / 2.2
         
         //bean stuff
         beans.layer.cornerRadius = beans.frame.height/2

@@ -98,6 +98,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dGw-el-wO2" secondAttribute="height" id="sJV-jn-1dt"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="hlg-0G-8zF" kind="presentation" modalPresentationStyle="fullScreen" id="7PL-3j-ytq"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-U4-3g5">
                                 <rect key="frame" x="25" y="59" width="63" height="63"/>
@@ -150,6 +153,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mv-cI-z6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="231.8840579710145" y="174.77678571428569"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="6Qb-IM-1dp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="hlg-0G-8zF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvJ-2k-YTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808" y="165"/>
         </scene>
     </scenes>
     <resources>
