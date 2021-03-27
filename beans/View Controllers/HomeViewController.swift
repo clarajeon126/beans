@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         beans.layer.shadowOffset = CGSize(width: 5, height: 5)
         beans.layer.shadowRadius = 5
         beans.layer.shadowOpacity = 1.0
-        beans.layer.shadowColor = CGColor(red: 163, green: 229, blue: 243, alpha: 1.0)
+        beans.layer.shadowColor = CGColor(red: 163.0/255.0, green: 229.0/255.0, blue: 243.0/255.0, alpha: 1.0)
         
         //ookmarks stuff
         
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         bookmarks.layer.shadowOffset = CGSize(width: 5, height: 5)
         bookmarks.layer.shadowRadius = 5
         bookmarks.layer.shadowOpacity = 1.0
-        bookmarks.layer.shadowColor = CGColor(red: 251, green: 203, blue: 203, alpha: 1.0)
+        bookmarks.layer.shadowColor = CGColor(red: 249.0/255.0, green: 158.0/255.0, blue: 158.0/255.0, alpha: 1.0)
         
         
         //recomendation stuff
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
         recommendations.layer.shadowOffset = CGSize(width: 5, height: 5)
         recommendations.layer.shadowRadius = 5
         recommendations.layer.shadowOpacity = 1.0
-       recommendations.layer.shadowColor = CGColor(red: 249, green: 207, blue: 44, alpha: 1.0)
+        recommendations.layer.shadowColor = CGColor(red: 249.0/255.0, green: 207.0/255.0, blue: 44.0/255.0, alpha: 1.0)
         
        
         // Do any additional setup after loading the view.
