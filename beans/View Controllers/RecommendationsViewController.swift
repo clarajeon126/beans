@@ -11,16 +11,103 @@ class RecommendationsViewController: UIViewController {
 
     @IBOutlet var beanButtons: [UIButton]!
     
-    var beanPressed = ""
+    @IBOutlet weak var backToHomeButton: UIButton!
+    
+    @IBOutlet weak var recommendTextView: UITextView!
+    
+    @IBOutlet var titles: [UILabel]!
+    
+    @IBOutlet weak var thankYouLabel: UILabel!
+    
+    //to set which bean it is for
+    var beanPressed = "empty"
+    var selectedButton: UIButton? = nil
+    
     @IBAction func artBeanTapped(_ sender: Any) {
-        let bean = beanButtons[0]
-        bean.layer.borderWidth = 2
+        beanButtonChange(num: 0)
+    }
+    
+    @IBAction func chemBeanTapped(_ sender: Any) {
+        beanButtonChange(num: 1)
+    }
+    
+    @IBAction func homeBeanTapped(_ sender: Any) {
+        beanButtonChange(num: 2)
+    }
+    @IBAction func itemHistoBeanTapped(_ sender: Any) {
+        beanButtonChange(num: 3)
+    }
+    
+    func beanButtonChange(num: Int){
+        let beanButton = beanButtons[num]
         
+        if beanPressed == "empty" {
+            putABorder(button: beanButton)
+            selectedButton = beanButton
+            beanPressed = beanButton.titleLabel?.text ?? "empty"
+        }
+        else if beanPressed != beanButton.titleLabel?.text {
+            eraseBorder(button: selectedButton!)
+            putABorder(button: beanButton)
+            selectedButton = beanButton
+            
+            beanPressed = beanButton.titleLabel?.text ?? "empty"
+        }
+        else {
+            eraseBorder(button: beanButton)
+            beanPressed = "empty"
+        }
+        
+        print(beanPressed)
+    }
+    
+    func putABorder(button : UIButton){
+        button.layer.borderWidth = 2
+    }
+    func eraseBorder(button : UIButton){
+        button.layer.borderWidth = 0
+    }
+    
+    
+    @IBAction func submitTapped(_ sender: Any) {
+        if beanPressed != "empty" && !recommendTextView.text.isEmpty {
+            for x in 0..<beanButtons.count {
+                beanButtons[x].isHidden = true
+            }
+            
+            for x in 0..<titles.count {
+                titles[x].isHidden = true
+            }
+            recommendTextView.isHidden = true
+            
+            thankYouLabel.isHidden = false
+            
+            DatabaseManager.shared.addRecommend(bean: beanPressed, recommend: recommendTextView.text)
+        }
+        else {
+            shakeButton(button: beanButtons[4])
+        }
+        
+    }
+    
+    //shake a button
+    func shakeButton(button: UIButton) {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.6
+        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        button.layer.add(animation, forKey: "shake")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        recommendTextView.delegate = self
+        recommendTextView.layer.cornerRadius = 10
+        
+        //back to home button as a circle
+        backToHomeButton.layer.cornerRadius = backToHomeButton.frame.width / 2
+        
         for x in 0..<beanButtons.count {
             let beanInQuestion = beanButtons[x]
             
@@ -29,19 +116,10 @@ class RecommendationsViewController: UIViewController {
             beanInQuestion.layer.borderColor = UIColor.white.cgColor
         }
         
-        
-        // Do any additional setup after loading the view.
     }
+
+}
+
+extension RecommendationsViewController: UITextViewDelegate {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

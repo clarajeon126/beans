@@ -48,6 +48,9 @@
                                                 <state key="normal" title="chembean">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chemBeanTapped:" destination="viu-Hh-Son" eventType="touchUpInside" id="9Px-kN-gM0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -62,6 +65,9 @@
                                                 <state key="normal" title="homebean">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="homeBeanTapped:" destination="viu-Hh-Son" eventType="touchUpInside" id="0L1-B3-N51"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYs-4m-94C">
                                                 <rect key="frame" x="175.5" y="0.0" width="155.5" height="58"/>
@@ -71,6 +77,9 @@
                                                 <state key="normal" title="item-histo bean">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="itemHistoBeanTapped:" destination="viu-Hh-Son" eventType="touchUpInside" id="Lzg-yl-z16"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -91,6 +100,9 @@
                                 <state key="normal" title="submit!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitTapped:" destination="viu-Hh-Son" eventType="touchUpInside" id="F9E-vD-pT5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGw-el-wO2">
                                 <rect key="frame" x="15" y="49" width="83" height="83"/>
@@ -110,7 +122,7 @@
                                 <rect key="frame" x="41.5" y="423" width="331" height="179"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftbean" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-l9-rwm">
@@ -119,6 +131,12 @@
                                     <constraint firstAttribute="width" secondItem="OOJ-l9-rwm" secondAttribute="height" multiplier="683:512" id="wyv-bU-naL"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thank you very much bean!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCG-fY-uuh">
+                                <rect key="frame" x="50" y="420.5" width="314" height="55"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5nQ-4X-TyQ"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.87450980392156863" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,12 +148,15 @@
                             <constraint firstItem="7nt-Qz-8Gj" firstAttribute="height" secondItem="qGN-gV-FBj" secondAttribute="height" multiplier="0.2" id="Q6e-bS-Oij"/>
                             <constraint firstItem="OOJ-l9-rwm" firstAttribute="leading" secondItem="5nQ-4X-TyQ" secondAttribute="leading" id="SwE-4c-2Oq"/>
                             <constraint firstItem="Q6i-M9-lwc" firstAttribute="top" secondItem="sBa-lb-EsX" secondAttribute="bottom" constant="5" id="TFd-tZ-a5j"/>
+                            <constraint firstItem="qCG-fY-uuh" firstAttribute="leading" secondItem="5nQ-4X-TyQ" secondAttribute="leading" constant="50" id="aDR-Sv-BSr"/>
                             <constraint firstItem="Q6i-M9-lwc" firstAttribute="width" secondItem="qGN-gV-FBj" secondAttribute="width" multiplier="0.8" id="do8-6S-t6i"/>
                             <constraint firstItem="Q6i-M9-lwc" firstAttribute="leading" secondItem="sBa-lb-EsX" secondAttribute="leading" id="eQQ-ot-X4T"/>
                             <constraint firstItem="dGw-el-wO2" firstAttribute="leading" secondItem="5nQ-4X-TyQ" secondAttribute="leading" constant="15" id="eXj-ks-gDC"/>
                             <constraint firstItem="dGw-el-wO2" firstAttribute="top" secondItem="5nQ-4X-TyQ" secondAttribute="top" constant="5" id="iwm-iR-Zsc"/>
                             <constraint firstAttribute="bottom" secondItem="OOJ-l9-rwm" secondAttribute="bottom" id="loT-CL-IEL"/>
+                            <constraint firstItem="5nQ-4X-TyQ" firstAttribute="trailing" secondItem="qCG-fY-uuh" secondAttribute="trailing" constant="50" id="mSh-Km-yEw"/>
                             <constraint firstItem="dGw-el-wO2" firstAttribute="width" secondItem="qGN-gV-FBj" secondAttribute="width" multiplier="0.2" id="p0M-OU-yt3"/>
+                            <constraint firstItem="qCG-fY-uuh" firstAttribute="centerY" secondItem="qGN-gV-FBj" secondAttribute="centerY" id="rAj-5h-k4x"/>
                             <constraint firstItem="sBa-lb-EsX" firstAttribute="top" secondItem="dGw-el-wO2" secondAttribute="bottom" constant="50" id="uf6-Sz-EWX"/>
                             <constraint firstItem="7nt-Qz-8Gj" firstAttribute="top" secondItem="glB-SK-GC4" secondAttribute="bottom" constant="5" id="vQa-U2-hhl"/>
                             <constraint firstItem="Q6i-M9-lwc" firstAttribute="leading" secondItem="glB-SK-GC4" secondAttribute="leading" id="wjb-BF-Ul3"/>
@@ -143,11 +164,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backToHomeButton" destination="dGw-el-wO2" id="SkH-lC-qgt"/>
+                        <outlet property="recommendTextView" destination="7nt-Qz-8Gj" id="hS5-Qg-MkF"/>
+                        <outlet property="thankYouLabel" destination="qCG-fY-uuh" id="vDV-US-b0M"/>
                         <outletCollection property="beanButtons" destination="fbe-9R-frX" collectionClass="NSMutableArray" id="ZT7-dq-KWh"/>
                         <outletCollection property="beanButtons" destination="4iv-7b-Uh9" collectionClass="NSMutableArray" id="Lyj-43-BcN"/>
                         <outletCollection property="beanButtons" destination="R4M-zZ-53O" collectionClass="NSMutableArray" id="7gS-3a-so3"/>
                         <outletCollection property="beanButtons" destination="FYs-4m-94C" collectionClass="NSMutableArray" id="yno-I4-KRC"/>
                         <outletCollection property="beanButtons" destination="0e6-v3-AAl" collectionClass="NSMutableArray" id="d0X-Ja-jIU"/>
+                        <outletCollection property="titles" destination="sBa-lb-EsX" collectionClass="NSMutableArray" id="665-ai-PHr"/>
+                        <outletCollection property="titles" destination="glB-SK-GC4" collectionClass="NSMutableArray" id="RAz-Ia-E39"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mv-cI-z6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
