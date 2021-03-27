@@ -1,5 +1,5 @@
 //
-//  BeanPickerViewController.swift
+//  BeanPickerSingleViewController.swift
 //  beans
 //
 //  Created by Clara Jeon on 3/27/21.
@@ -7,13 +7,20 @@
 
 import UIKit
 
-class BeanPickerViewController: UIViewController {
+class BeanPickerSingleViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var buttonHome: UIButton!
+    
+    @IBOutlet var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //make it a circular button
+        buttonHome.layer.cornerRadius = buttonHome.frame.width / 2
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     

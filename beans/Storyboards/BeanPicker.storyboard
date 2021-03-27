@@ -16,20 +16,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILo-kn-jTE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILo-kn-jTE">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="kyh-hB-KgL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jAr-2q-afe"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Fi-Ll-jRC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ILo-kn-jTE" firstAttribute="leading" secondItem="6Fi-Ll-jRC" secondAttribute="leading" id="Apw-Nl-7u4"/>
+                            <constraint firstItem="ILo-kn-jTE" firstAttribute="top" secondItem="6Fi-Ll-jRC" secondAttribute="top" id="C1R-ld-gYd"/>
+                            <constraint firstItem="6Fi-Ll-jRC" firstAttribute="trailing" secondItem="ILo-kn-jTE" secondAttribute="trailing" id="D0j-tL-Oeu"/>
+                            <constraint firstItem="6Fi-Ll-jRC" firstAttribute="bottom" secondItem="ILo-kn-jTE" secondAttribute="bottom" id="UeU-0g-rsv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ILo-kn-jTE" id="Fox-Ug-QKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeK-9a-T9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="187"/>
+        </scene>
+        <!--Bean Picker Single View Controller-->
+        <scene sceneID="Q4d-6f-gXl">
+            <objects>
+                <viewController id="F0E-w7-uaY" customClass="BeanPickerSingleViewController" customModule="beans" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UhM-zA-wBc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saI-VA-ror">
+                                <rect key="frame" x="15" y="49" width="83" height="83"/>
+                                <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="saI-VA-ror" secondAttribute="height" id="vnP-pq-ETO"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="y9w-bT-ySf" kind="presentation" modalPresentationStyle="fullScreen" id="jsJ-Gf-NEL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r7M-P1-eMV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="saI-VA-ror" firstAttribute="leading" secondItem="r7M-P1-eMV" secondAttribute="leading" constant="15" id="PRm-u5-gGV"/>
+                            <constraint firstItem="saI-VA-ror" firstAttribute="top" secondItem="r7M-P1-eMV" secondAttribute="top" constant="5" id="Sf7-Y5-2vc"/>
+                            <constraint firstItem="saI-VA-ror" firstAttribute="width" secondItem="UhM-zA-wBc" secondAttribute="width" multiplier="0.2" id="Za1-6u-Kgg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="UhM-zA-wBc" id="Ffd-Ch-l1Z"/>
+                        <outlet property="buttonHome" destination="saI-VA-ror" id="h6D-G5-zwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWA-pG-IZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.50724637681162" y="186.83035714285714"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="bzZ-Nd-bsf">
+            <objects>
+                <viewControllerPlaceholder id="y9w-bT-ySf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuy-UW-QkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="187"/>
         </scene>
     </scenes>
     <resources>

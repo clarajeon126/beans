@@ -14,6 +14,7 @@
 		850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF551260F8E1A00FFFAA3 /* Main.storyboard */; };
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
+		8574471B260FA42F0015B42B /* BeanPickerSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574471A260FA42F0015B42B /* BeanPickerSingleViewController.swift */; };
 		8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */; };
 		8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B844260F92A900E6CA3A /* artbean.storyboard */; };
 		8592B848260F92B400E6CA3A /* chembean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B847260F92B400E6CA3A /* chembean.storyboard */; };
@@ -44,6 +45,7 @@
 		850CF554260F8E1C00FFFAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8574471A260FA42F0015B42B /* BeanPickerSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanPickerSingleViewController.swift; sourceTree = "<group>"; };
 		8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		8592B844260F92A900E6CA3A /* artbean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = artbean.storyboard; sourceTree = "<group>"; };
 		8592B847260F92B400E6CA3A /* chembean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = chembean.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				8592B86D260F949F00E6CA3A /* RecommendationsViewController.swift */,
 				8592B870260F94AB00E6CA3A /* BookmarkViewController.swift */,
 				8592B873260F94FA00E6CA3A /* BeanPickerViewController.swift */,
+				8574471A260FA42F0015B42B /* BeanPickerSingleViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				8592B878260F952700E6CA3A /* DatabaseManager.swift in Sources */,
 				850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */,
 				8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */,
+				8574471B260FA42F0015B42B /* BeanPickerSingleViewController.swift in Sources */,
 				8592B855260F933200E6CA3A /* ChemBeanViewController.swift in Sources */,
 				8592B858260F933D00E6CA3A /* HomeBeanViewController.swift in Sources */,
 				8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */,
