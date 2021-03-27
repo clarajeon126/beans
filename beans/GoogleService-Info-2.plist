@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1062698478993-5l9mf1uvadd8k6a2m4dektp8mtd5h92i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1062698478993-5l9mf1uvadd8k6a2m4dektp8mtd5h92i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDAIYEgrMqJqchkjcvcO4bAoAm3AK1wxYk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1062698478993</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>clara-jeon.beans</string>
+	<key>PROJECT_ID</key>
+	<string>beans-644c5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>beans-644c5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1062698478993:ios:2bf9a90044c4b236e2fe30</string>
+</dict>
+</plist>

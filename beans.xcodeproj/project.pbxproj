@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF551260F8E1A00FFFAA3 /* Main.storyboard */; };
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
+		8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		850CF554260F8E1C00FFFAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 		850CF54A260F8E1A00FFFAA3 /* beans */ = {
 			isa = PBXGroup;
 			children = (
+				8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */,
 				850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */,
 				850CF54D260F8E1A00FFFAA3 /* art.scnassets */,
 				850CF54F260F8E1A00FFFAA3 /* ViewController.swift */,
@@ -88,7 +91,6 @@
 				30323980E4CFA4637126BD0F /* Pods-beans.debug.xcconfig */,
 				65F7EBD5A154E765DD15B6AB /* Pods-beans.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */,
 				850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */,
 				850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */,
 				850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */,
