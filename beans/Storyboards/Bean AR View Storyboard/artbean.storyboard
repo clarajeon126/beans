@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Art Bean View Controller-->
+        <scene sceneID="9XX-TR-Qsb">
+            <objects>
+                <viewController id="CSw-Q3-ofL" customClass="ArtBeanViewController" customModule="beans" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H0A-Uy-2yS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVn-bz-gYP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d7u-fR-I11"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TVn-bz-gYP" firstAttribute="leading" secondItem="d7u-fR-I11" secondAttribute="leading" id="foc-X7-Vid"/>
+                            <constraint firstItem="TVn-bz-gYP" firstAttribute="trailing" secondItem="d7u-fR-I11" secondAttribute="trailing" id="ogx-AY-f8o"/>
+                            <constraint firstItem="TVn-bz-gYP" firstAttribute="top" secondItem="H0A-Uy-2yS" secondAttribute="top" id="wow-t9-9kJ"/>
+                            <constraint firstItem="TVn-bz-gYP" firstAttribute="bottom" secondItem="d7u-fR-I11" secondAttribute="bottom" id="y3A-qR-ViP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="TVn-bz-gYP" id="Whs-Es-kKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-at-3ki" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

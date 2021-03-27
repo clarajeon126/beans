@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chem Bean View Controller-->
+        <scene sceneID="zfv-9f-RCp">
+            <objects>
+                <viewController id="Fag-1A-74I" customClass="ChemBeanViewController" customModule="beans" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4R-GJ-Eys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmG-lH-kYl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WIt-LV-6tE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HmG-lH-kYl" firstAttribute="leading" secondItem="WIt-LV-6tE" secondAttribute="leading" id="Pio-VK-Yny"/>
+                            <constraint firstItem="HmG-lH-kYl" firstAttribute="top" secondItem="y4R-GJ-Eys" secondAttribute="top" id="T8k-PT-530"/>
+                            <constraint firstItem="HmG-lH-kYl" firstAttribute="bottom" secondItem="WIt-LV-6tE" secondAttribute="bottom" id="c3K-VG-CA2"/>
+                            <constraint firstItem="HmG-lH-kYl" firstAttribute="trailing" secondItem="WIt-LV-6tE" secondAttribute="trailing" id="enh-C7-zx4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="HmG-lH-kYl" id="DWg-E3-qox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOb-m1-K3k" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

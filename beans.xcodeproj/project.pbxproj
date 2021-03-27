@@ -15,6 +15,22 @@
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
 		8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */; };
+		8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B844260F92A900E6CA3A /* artbean.storyboard */; };
+		8592B848260F92B400E6CA3A /* chembean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B847260F92B400E6CA3A /* chembean.storyboard */; };
+		8592B84B260F92BD00E6CA3A /* homebean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B84A260F92BD00E6CA3A /* homebean.storyboard */; };
+		8592B84E260F92C500E6CA3A /* itemhistobean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B84D260F92C500E6CA3A /* itemhistobean.storyboard */; };
+		8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B850260F932400E6CA3A /* ArtBeanViewController.swift */; };
+		8592B855260F933200E6CA3A /* ChemBeanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B854260F933200E6CA3A /* ChemBeanViewController.swift */; };
+		8592B858260F933D00E6CA3A /* HomeBeanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B857260F933D00E6CA3A /* HomeBeanViewController.swift */; };
+		8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B85A260F934900E6CA3A /* ItemHistoBeanViewController.swift */; };
+		8592B85E260F936300E6CA3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B85D260F936300E6CA3A /* HomeViewController.swift */; };
+		8592B861260F939100E6CA3A /* BeanPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B860260F939100E6CA3A /* BeanPicker.storyboard */; };
+		8592B864260F939F00E6CA3A /* Bookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B863260F939F00E6CA3A /* Bookmark.storyboard */; };
+		8592B867260F93B700E6CA3A /* Recommendations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B866260F93B700E6CA3A /* Recommendations.storyboard */; };
+		8592B86E260F949F00E6CA3A /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B86D260F949F00E6CA3A /* RecommendationsViewController.swift */; };
+		8592B871260F94AB00E6CA3A /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B870260F94AB00E6CA3A /* BookmarkViewController.swift */; };
+		8592B874260F94FA00E6CA3A /* BeanPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B873260F94FA00E6CA3A /* BeanPickerViewController.swift */; };
+		8592B878260F952700E6CA3A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592B877260F952700E6CA3A /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +45,22 @@
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		8592B844260F92A900E6CA3A /* artbean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = artbean.storyboard; sourceTree = "<group>"; };
+		8592B847260F92B400E6CA3A /* chembean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = chembean.storyboard; sourceTree = "<group>"; };
+		8592B84A260F92BD00E6CA3A /* homebean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homebean.storyboard; sourceTree = "<group>"; };
+		8592B84D260F92C500E6CA3A /* itemhistobean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = itemhistobean.storyboard; sourceTree = "<group>"; };
+		8592B850260F932400E6CA3A /* ArtBeanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBeanViewController.swift; sourceTree = "<group>"; };
+		8592B854260F933200E6CA3A /* ChemBeanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemBeanViewController.swift; sourceTree = "<group>"; };
+		8592B857260F933D00E6CA3A /* HomeBeanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBeanViewController.swift; sourceTree = "<group>"; };
+		8592B85A260F934900E6CA3A /* ItemHistoBeanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHistoBeanViewController.swift; sourceTree = "<group>"; };
+		8592B85D260F936300E6CA3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8592B860260F939100E6CA3A /* BeanPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeanPicker.storyboard; sourceTree = "<group>"; };
+		8592B863260F939F00E6CA3A /* Bookmark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookmark.storyboard; sourceTree = "<group>"; };
+		8592B866260F93B700E6CA3A /* Recommendations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recommendations.storyboard; sourceTree = "<group>"; };
+		8592B86D260F949F00E6CA3A /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
+		8592B870260F94AB00E6CA3A /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		8592B873260F94FA00E6CA3A /* BeanPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanPickerViewController.swift; sourceTree = "<group>"; };
+		8592B877260F952700E6CA3A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,14 +107,78 @@
 			children = (
 				8592B83F260F91A200E6CA3A /* GoogleService-Info-2.plist */,
 				850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */,
+				8592B876260F951400E6CA3A /* Resources */,
+				8592B843260F926D00E6CA3A /* View Controllers */,
+				8592B842260F925100E6CA3A /* Storyboards */,
 				850CF54D260F8E1A00FFFAA3 /* art.scnassets */,
-				850CF54F260F8E1A00FFFAA3 /* ViewController.swift */,
-				850CF551260F8E1A00FFFAA3 /* Main.storyboard */,
 				850CF554260F8E1C00FFFAA3 /* Assets.xcassets */,
-				850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */,
 				850CF559260F8E1C00FFFAA3 /* Info.plist */,
 			);
 			path = beans;
+			sourceTree = "<group>";
+		};
+		8592B842260F925100E6CA3A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */,
+				850CF551260F8E1A00FFFAA3 /* Main.storyboard */,
+				8592B860260F939100E6CA3A /* BeanPicker.storyboard */,
+				8592B863260F939F00E6CA3A /* Bookmark.storyboard */,
+				8592B866260F93B700E6CA3A /* Recommendations.storyboard */,
+				8592B869260F93C400E6CA3A /* Bean AR View Storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8592B843260F926D00E6CA3A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				850CF54F260F8E1A00FFFAA3 /* ViewController.swift */,
+				8592B86B260F947800E6CA3A /* Bean AR VC */,
+				8592B85D260F936300E6CA3A /* HomeViewController.swift */,
+				8592B86D260F949F00E6CA3A /* RecommendationsViewController.swift */,
+				8592B870260F94AB00E6CA3A /* BookmarkViewController.swift */,
+				8592B873260F94FA00E6CA3A /* BeanPickerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8592B869260F93C400E6CA3A /* Bean AR View Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8592B844260F92A900E6CA3A /* artbean.storyboard */,
+				8592B847260F92B400E6CA3A /* chembean.storyboard */,
+				8592B84A260F92BD00E6CA3A /* homebean.storyboard */,
+				8592B84D260F92C500E6CA3A /* itemhistobean.storyboard */,
+			);
+			path = "Bean AR View Storyboard";
+			sourceTree = "<group>";
+		};
+		8592B86B260F947800E6CA3A /* Bean AR VC */ = {
+			isa = PBXGroup;
+			children = (
+				8592B850260F932400E6CA3A /* ArtBeanViewController.swift */,
+				8592B854260F933200E6CA3A /* ChemBeanViewController.swift */,
+				8592B857260F933D00E6CA3A /* HomeBeanViewController.swift */,
+				8592B85A260F934900E6CA3A /* ItemHistoBeanViewController.swift */,
+			);
+			path = "Bean AR VC";
+			sourceTree = "<group>";
+		};
+		8592B876260F951400E6CA3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8592B87A260F956500E6CA3A /* Classes */,
+				8592B877260F952700E6CA3A /* DatabaseManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8592B87A260F956500E6CA3A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C981266805036F174453B238 /* Pods */ = {
@@ -153,10 +249,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8592B848260F92B400E6CA3A /* chembean.storyboard in Resources */,
+				8592B867260F93B700E6CA3A /* Recommendations.storyboard in Resources */,
+				8592B84E260F92C500E6CA3A /* itemhistobean.storyboard in Resources */,
+				8592B84B260F92BD00E6CA3A /* homebean.storyboard in Resources */,
 				8592B840260F91A200E6CA3A /* GoogleService-Info-2.plist in Resources */,
+				8592B861260F939100E6CA3A /* BeanPicker.storyboard in Resources */,
+				8592B864260F939F00E6CA3A /* Bookmark.storyboard in Resources */,
 				850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */,
 				850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */,
 				850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */,
+				8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */,
 				850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8592B874260F94FA00E6CA3A /* BeanPickerViewController.swift in Sources */,
+				8592B878260F952700E6CA3A /* DatabaseManager.swift in Sources */,
 				850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */,
+				8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */,
+				8592B855260F933200E6CA3A /* ChemBeanViewController.swift in Sources */,
+				8592B858260F933D00E6CA3A /* HomeBeanViewController.swift in Sources */,
+				8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */,
+				8592B86E260F949F00E6CA3A /* RecommendationsViewController.swift in Sources */,
+				8592B85E260F936300E6CA3A /* HomeViewController.swift in Sources */,
+				8592B871260F94AB00E6CA3A /* BookmarkViewController.swift in Sources */,
 				850CF54C260F8E1A00FFFAA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
