@@ -12,17 +12,23 @@ class ChemBeanViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            let formula = "CH2"
-            getQueryID(from: formula) { (queryId) in
-                self.getRecordID(from: queryId) { (results) in
-                    self.getInfo(from: results) { (finalData) in
-                        for x in 0..<finalData.count{
-                            print(finalData[x])
-                        }
-                    }
+            
+        }
+    
+    func findInfo(){
+    let formula = "CH2"
+    getQueryID(from: formula) { (queryId) in
+        self.getRecordID(from: queryId) { (results) in
+            self.getInfo(from: results) { (finalData) in
+                for x in 0..<finalData.count{
+                    print(finalData[x])
                 }
             }
         }
+    }
+    }
+
+    
             func getQueryID(from formula: String, completion: @escaping ((_ querying: String    ) -> ())){
           
             ///// api call asking for formula and returning query id
