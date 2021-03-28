@@ -20,6 +20,7 @@
 		8574473F260FE69C0015B42B /* SpecificBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574473E260FE69C0015B42B /* SpecificBookmarkViewController.swift */; };
 		85744741260FE9940015B42B /* BookmarkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85744740260FE9940015B42B /* BookmarkData.swift */; };
 		85744743260FEC3B0015B42B /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85744742260FEC3B0015B42B /* GlobalVariables.swift */; };
+		8574475D2610486A0015B42B /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8574475C261048690015B42B /* YOLOv3Tiny.mlmodel */; };
 		8592B840260F91A200E6CA3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */; };
 		8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B844260F92A900E6CA3A /* artbean.storyboard */; };
 		8592B848260F92B400E6CA3A /* chembean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8592B847260F92B400E6CA3A /* chembean.storyboard */; };
@@ -69,6 +70,7 @@
 		8574473E260FE69C0015B42B /* SpecificBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBookmarkViewController.swift; sourceTree = "<group>"; };
 		85744740260FE9940015B42B /* BookmarkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkData.swift; sourceTree = "<group>"; };
 		85744742260FEC3B0015B42B /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		8574475C261048690015B42B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8592B844260F92A900E6CA3A /* artbean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = artbean.storyboard; sourceTree = "<group>"; };
 		8592B847260F92B400E6CA3A /* chembean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = chembean.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */,
 				850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */,
+				8574475C261048690015B42B /* YOLOv3Tiny.mlmodel */,
 				8592B876260F951400E6CA3A /* Resources */,
 				8592B843260F926D00E6CA3A /* View Controllers */,
 				8592B842260F925100E6CA3A /* Storyboards */,
@@ -355,6 +358,7 @@
 				85744741260FE9940015B42B /* BookmarkData.swift in Sources */,
 				8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */,
 				85744743260FEC3B0015B42B /* GlobalVariables.swift in Sources */,
+				8574475D2610486A0015B42B /* YOLOv3Tiny.mlmodel in Sources */,
 				8592B86E260F949F00E6CA3A /* RecommendationsViewController.swift in Sources */,
 				8592B85E260F936300E6CA3A /* HomeViewController.swift in Sources */,
 				8592B871260F94AB00E6CA3A /* BookmarkViewController.swift in Sources */,
@@ -422,6 +426,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -483,6 +488,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

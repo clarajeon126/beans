@@ -180,6 +180,9 @@
                                                     <constraint firstAttribute="width" constant="330" id="K6A-3H-p66"/>
                                                     <constraint firstAttribute="height" constant="520" id="OsW-yB-CHk"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="BEI-wD-wzl" kind="presentation" modalPresentationStyle="fullScreen" id="lZc-uJ-sR4"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house bean" translatesAutoresizingMaskIntoConstraints="NO" id="QEe-Fr-lkw">
                                                 <rect key="frame" x="42" y="188" width="330" height="520"/>
@@ -366,7 +369,15 @@
                 <viewControllerPlaceholder storyboardName="Main" id="y9w-bT-ySf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuy-UW-QkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="148"/>
+            <point key="canvasLocation" x="478" y="187"/>
+        </scene>
+        <!--homebean-->
+        <scene sceneID="POr-oA-JX7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="homebean" id="BEI-wD-wzl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mz-mn-JkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="168"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
