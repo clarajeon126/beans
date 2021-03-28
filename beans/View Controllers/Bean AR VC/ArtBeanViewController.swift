@@ -33,7 +33,11 @@ class ArtBeanViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.scene = scene
         
-        guard let selectedModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
+        /*guard let selectedModel = try? VNCoreMLModel else {
+            
+        }*/
+        
+        guard let selectedModel = try? VNCoreMLModel(for: ArtTypeClassifier().model) else {
             fatalError("error model would not load")
         }
         
@@ -54,7 +58,6 @@ class ArtBeanViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         // Enable plane detection
         configuration.planeDetection = .horizontal
-        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -74,9 +77,7 @@ class ArtBeanViewController: UIViewController, ARSCNViewDelegate {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                 continue
             }
-            print(objectObservation.labels.count)
-            let observation = objectObservation.labels
-            print(observation)
+            let observation = objectObservation
         }
     }
     
