@@ -19,10 +19,22 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmG-lH-kYl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-Y1-Yvd">
+                                <rect key="frame" x="63" y="77" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-f6-zhR" userLabel="To home button">
+                                <rect key="frame" x="43" y="44" width="83" height="83"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bBh-f6-zhR" secondAttribute="height" id="8U7-Lf-arA"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WIt-LV-6tE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bBh-f6-zhR" firstAttribute="width" secondItem="bBh-f6-zhR" secondAttribute="height" id="Ezb-ma-WMJ"/>
                             <constraint firstItem="HmG-lH-kYl" firstAttribute="leading" secondItem="WIt-LV-6tE" secondAttribute="leading" id="Pio-VK-Yny"/>
                             <constraint firstItem="HmG-lH-kYl" firstAttribute="top" secondItem="y4R-GJ-Eys" secondAttribute="top" id="T8k-PT-530"/>
                             <constraint firstItem="HmG-lH-kYl" firstAttribute="bottom" secondItem="WIt-LV-6tE" secondAttribute="bottom" id="c3K-VG-CA2"/>
@@ -30,7 +42,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="HmG-lH-kYl" id="DWg-E3-qox"/>
+                        <outlet property="sceneView" destination="HmG-lH-kYl" id="bX4-P4-bvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOb-m1-K3k" sceneMemberID="firstResponder"/>
@@ -39,6 +51,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="singlebean" width="683" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
