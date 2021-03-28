@@ -18,6 +18,7 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
     
     let infoViewController = InfoViewController()
     
+    @IBOutlet weak var toHomeButton: UIButton!
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     
@@ -25,6 +26,7 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         
         
+        toHomeButton.layer.cornerRadius = toHomeButton.frame.width / 2.2
         //set up ar scene
         sceneView.delegate = self
         sceneView.showsStatistics = false
@@ -70,25 +72,13 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         createBall(position: hitVector)
     }
     
-    /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            return
-        }
-        let result = sceneView.hitTest(touch.location(in: sceneView), types: [ARHitTestResult.ResultType.featurePoint])
-        guard let hitResult = result.last else{
-            return
-        }
-        let hitTransform = SCNMatrix4.init(hitResult.worldTransform)
-        let hitVector = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
-        createBall(position: hitVector)
-    }*/
     
     
     func createBall(position : SCNVector3){
         
         //1. Create The Plane Geometry With Our Width & Height Parameters
-        let planeGeometry = SCNPlane(width: 0.5,
-                                     height: 0.5)
+        let planeGeometry = SCNPlane(width: 0.3,
+                                     height: 0.3)
 
             //2. Create A New Material
             let material = SCNMaterial()
@@ -197,7 +187,7 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
                             
                             infoViewController.infoFill = homeBeanArray[x].info
                             infoViewController.titleFill = homeBeanArray[x].title
-                            
+                            infoViewController.beanNum = 2
                             homeBeanArray[x].keyword.remove(at: y)
                             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
                             let point = objectBounds.origin
@@ -236,33 +226,5 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
             print(error)
         }
         
-    }
-    
-    func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence) -> CATextLayer {
-        let textLayer = CATextLayer()
-        textLayer.name = "Object Label"
-        let formattedString = NSMutableAttributedString(string: String(format: "\(identifier)\nConfidence:  %.2f", confidence))
-        let largeFont = UIFont(name: "Helvetica", size: 24.0)!
-        formattedString.addAttributes([NSAttributedString.Key.font: largeFont], range: NSRange(location: 0, length: identifier.count))
-        textLayer.string = formattedString
-        textLayer.bounds = CGRect(x: 0, y: 0, width: bounds.size.height - 10, height: bounds.size.width - 10)
-        textLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-        textLayer.shadowOpacity = 0.7
-        textLayer.shadowOffset = CGSize(width: 2, height: 2)
-        textLayer.foregroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.0, 0.0, 0.0, 1.0])
-        textLayer.contentsScale = 2.0 // retina rendering
-        // rotate the layer into screen orientation and scale and mirror
-        textLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: 1.0, y: -1.0))
-        return textLayer
-    }
-    
-    func createRoundedRectLayerWithBounds(_ bounds: CGRect) -> CALayer {
-        let shapeLayer = CALayer()
-        shapeLayer.bounds = bounds
-        shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-        shapeLayer.name = "Found Object"
-        shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
-        shapeLayer.cornerRadius = 7
-        return shapeLayer
     }
 }

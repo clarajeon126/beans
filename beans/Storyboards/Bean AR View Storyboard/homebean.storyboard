@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="yeZ-bM-mSO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="r4t-VX-dX8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGf-fn-IjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="161"/>
+        </scene>
         <!--Home Bean View Controller-->
         <scene sceneID="xTy-pz-UKF">
             <objects>
@@ -19,18 +27,36 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHA-g9-HLh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg4-Rb-1yd">
+                                <rect key="frame" x="15" y="49" width="83" height="83"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wg4-Rb-1yd" secondAttribute="height" id="72Y-oe-ujh"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="r4t-VX-dX8" kind="presentation" modalPresentationStyle="fullScreen" id="VZa-Ne-RAE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="VHP-xD-tsa">
+                                <rect key="frame" x="25" y="59" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xJ1-vd-RUp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Wg4-Rb-1yd" firstAttribute="width" secondItem="YHA-g9-HLh" secondAttribute="width" multiplier="0.2" id="Gdh-t5-sPe"/>
+                            <constraint firstItem="Wg4-Rb-1yd" firstAttribute="leading" secondItem="xJ1-vd-RUp" secondAttribute="leading" constant="15" id="Qf5-Hc-Wz7"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="bottom" secondItem="2SK-6m-pcT" secondAttribute="bottom" id="SNf-3W-3JZ"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="leading" secondItem="xJ1-vd-RUp" secondAttribute="leading" id="VDn-Fc-GwM"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="top" secondItem="2SK-6m-pcT" secondAttribute="top" id="aNw-Z6-ZC3"/>
+                            <constraint firstItem="Wg4-Rb-1yd" firstAttribute="top" secondItem="xJ1-vd-RUp" secondAttribute="top" constant="5" id="bbu-hd-NOQ"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="trailing" secondItem="xJ1-vd-RUp" secondAttribute="trailing" id="xgW-it-ndT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="YHA-g9-HLh" id="0Ua-R7-EFa"/>
+                        <outlet property="toHomeButton" destination="Wg4-Rb-1yd" id="yQf-ig-q6l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URN-YO-0p7" sceneMemberID="firstResponder"/>
@@ -39,6 +65,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="singlebean" width="683" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
