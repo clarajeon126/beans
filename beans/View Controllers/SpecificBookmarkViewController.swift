@@ -22,7 +22,6 @@ class SpecificBookmarkViewController: UIViewController {
         // Do any additional setup after loading the view.
         var bookmarkArray = returnDefaultBookMarkArray()
         
-        
         //set the view controller as whatever value
         let bookmarkInQuestion = bookmarkArray[numInArray ?? 0]
         
@@ -34,7 +33,6 @@ class SpecificBookmarkViewController: UIViewController {
         infoLabel.text = bookmarkInQuestion.info
         dateLabel.text = bookmarkInQuestion.date
         imageView.image = bookmarkInQuestion.image
-        
     }
     
     func returnDefaultBookMarkArray() -> [BookmarkData] {

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHA-g9-HLh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xJ1-vd-RUp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YHA-g9-HLh" firstAttribute="bottom" secondItem="xJ1-vd-RUp" secondAttribute="bottom" id="SNf-3W-3JZ"/>
+                            <constraint firstItem="YHA-g9-HLh" firstAttribute="bottom" secondItem="2SK-6m-pcT" secondAttribute="bottom" id="SNf-3W-3JZ"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="leading" secondItem="xJ1-vd-RUp" secondAttribute="leading" id="VDn-Fc-GwM"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="top" secondItem="2SK-6m-pcT" secondAttribute="top" id="aNw-Z6-ZC3"/>
                             <constraint firstItem="YHA-g9-HLh" firstAttribute="trailing" secondItem="xJ1-vd-RUp" secondAttribute="trailing" id="xgW-it-ndT"/>
