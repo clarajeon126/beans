@@ -179,7 +179,15 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                         for y in 0..<keywordArray.count {
                             let keyword = keywordArray[y]
                             if keyword == identifier {
-                                
+                                var infoing : [ItemInfo] = []
+                                for x in 0..<chemBeanArray.count{
+                                    infoing[x] = chemBeanArray[x]
+                                }
+                               /** findInfo(from: chemBeanArray[x].info) { (stringArray) in
+                                    for x in 0..<(stringArray.count){
+                                        infoing.append(stringArray[x])
+                                    }
+                                }**/
                                 
                                 infoViewController.infoFill = chemBeanArray[x].info
                                 infoViewController.titleFill = chemBeanArray[x].title
@@ -225,14 +233,14 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         }
     
     
-    func findInfo(){
-    let formula = "CH2"
+    func findInfo(from formula: String, completion: @escaping (( _ querying: [String] ) -> ())){
+    
     getQueryID(from: formula) { (queryId) in
         self.getRecordID(from: queryId) { (results) in
             self.getInfo(from: results) { (finalData) in
-                for x in 0..<finalData.count{
-                    print(finalData[x])
-                }
+                
+                    completion(finalData)
+                
             }
         }
     }
