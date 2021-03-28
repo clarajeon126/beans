@@ -19,13 +19,27 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSK-FH-JZC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXI-lM-EpZ">
+                                <rect key="frame" x="15" y="49" width="83" height="83"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sXI-lM-EpZ" secondAttribute="height" id="lIl-jN-vK8"/>
+                                </constraints>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-gP-GSj">
+                                <rect key="frame" x="25" y="59" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3cx-r7-0hS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qSK-FH-JZC" firstAttribute="top" secondItem="Xje-nh-iIh" secondAttribute="top" id="5sQ-g0-1Ij"/>
+                            <constraint firstItem="sXI-lM-EpZ" firstAttribute="leading" secondItem="3cx-r7-0hS" secondAttribute="leading" constant="15" id="BJm-OL-xox"/>
                             <constraint firstItem="qSK-FH-JZC" firstAttribute="bottom" secondItem="3cx-r7-0hS" secondAttribute="bottom" id="FSU-l2-34g"/>
                             <constraint firstItem="qSK-FH-JZC" firstAttribute="leading" secondItem="3cx-r7-0hS" secondAttribute="leading" id="GKS-iS-yzQ"/>
+                            <constraint firstItem="sXI-lM-EpZ" firstAttribute="top" secondItem="3cx-r7-0hS" secondAttribute="top" constant="5" id="bVh-Xi-Tdl"/>
+                            <constraint firstItem="sXI-lM-EpZ" firstAttribute="width" secondItem="qSK-FH-JZC" secondAttribute="width" multiplier="0.2" id="cbZ-KR-XD0"/>
                             <constraint firstItem="qSK-FH-JZC" firstAttribute="trailing" secondItem="3cx-r7-0hS" secondAttribute="trailing" id="qRM-SZ-xuN"/>
                         </constraints>
                     </view>
@@ -39,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="singlebean" width="683" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--artbean-->
+        <scene sceneID="vJL-9b-tMb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="artbean" id="4Sx-FL-IN9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2uH-K8-9P9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="137"/>
+        </scene>
         <!--Bean Picker View Controller-->
         <scene sceneID="lNP-Wh-6Tf">
             <objects>
@@ -42,6 +50,9 @@
                                                     <constraint firstAttribute="width" constant="330" id="ee3-ql-9kt"/>
                                                     <constraint firstAttribute="height" constant="520" id="rXS-Vo-yPt"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="4Sx-FL-IN9" kind="presentation" modalPresentationStyle="fullScreen" id="Qj0-qI-qSc"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="art bean" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-vn-o67">
                                                 <rect key="frame" x="42" y="188" width="330" height="520"/>
@@ -111,6 +122,9 @@
                                                     <constraint firstAttribute="height" constant="520" id="89y-un-z8U"/>
                                                     <constraint firstAttribute="width" constant="330" id="Lza-Gh-ZAJ"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="W2I-JM-KaD" kind="presentation" modalPresentationStyle="fullScreen" id="6FH-HV-MF1"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chem bean" translatesAutoresizingMaskIntoConstraints="NO" id="h4N-Z9-7dO">
                                                 <rect key="frame" x="42" y="188" width="330" height="520"/>
@@ -251,6 +265,9 @@
                                                     <constraint firstAttribute="height" constant="520" id="6XV-DF-pND"/>
                                                     <constraint firstAttribute="width" constant="330" id="C7r-zP-GQh"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="591-tc-Riw" kind="presentation" modalPresentationStyle="fullScreen" id="ThV-0N-Gj6"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item histo bean" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-ZU-Opd">
                                                 <rect key="frame" x="42" y="188" width="330" height="520"/>
@@ -378,6 +395,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mz-mn-JkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920" y="168"/>
+        </scene>
+        <!--chembean-->
+        <scene sceneID="vFO-6v-W44">
+            <objects>
+                <viewControllerPlaceholder storyboardName="chembean" id="W2I-JM-KaD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="564-vM-5Vo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="175"/>
+        </scene>
+        <!--itemhistobean-->
+        <scene sceneID="OFg-Qj-MY8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="itemhistobean" id="591-tc-Riw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9v-ov-u8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="270"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
