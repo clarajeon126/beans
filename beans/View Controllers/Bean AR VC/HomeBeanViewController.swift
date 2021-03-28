@@ -15,6 +15,9 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     public var homeBeanArray: [ItemInfo] = []
+    
+    let infoViewController = InfoViewController()
+    
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     
@@ -29,6 +32,8 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene()
         
         sceneView.scene = scene
+        
+        //let node = createInfoNode(info: ItemInfo(keyword: ["yee"], title: "title", info: "info"))
         
         //image detection model yolo
         guard let selectedModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
@@ -55,6 +60,75 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    func hitTestWithPoint(point: CGPoint){
+        let result = sceneView.hitTest(point, types: [ARHitTestResult.ResultType.featurePoint])
+        guard let hitResult = result.last else{
+            return
+        }
+        let hitTransform = SCNMatrix4.init(hitResult.worldTransform)
+        let hitVector = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
+        createBall(position: hitVector)
+    }
+    
+    /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            return
+        }
+        let result = sceneView.hitTest(touch.location(in: sceneView), types: [ARHitTestResult.ResultType.featurePoint])
+        guard let hitResult = result.last else{
+            return
+        }
+        let hitTransform = SCNMatrix4.init(hitResult.worldTransform)
+        let hitVector = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
+        createBall(position: hitVector)
+    }*/
+    
+    
+    func createBall(position : SCNVector3){
+        
+        //1. Create The Plane Geometry With Our Width & Height Parameters
+        let planeGeometry = SCNPlane(width: 0.5,
+                                     height: 0.5)
+
+            //2. Create A New Material
+            let material = SCNMaterial()
+
+            DispatchQueue.main.async {
+                
+                //let infoView = InfoView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+                
+                material.diffuse.contents = self.infoViewController.view
+                //3. Create The New Clickable View
+                /*let clickableElement = ClickableView(frame: CGRect(x: 0, y: 0,
+                                                                   width: 1,
+                                                                   height: 1))
+                clickableElement.tag = 1
+
+                //4. Add The Clickable View As A Materil
+                material.diffuse.contents = clickableElement*/
+            }
+
+            //5. Create The Plane Node
+            let planeNode = SCNNode(geometry: planeGeometry)
+        
+            planeNode.position = position
+
+            planeNode.geometry?.firstMaterial = material
+
+            //planeNode.opacity = 0.25
+
+            //planeNode.eulerAngles.x = -.pi / 2
+
+            //6. Add It To The Scene
+        sceneView.scene.rootNode.addChildNode(planeNode)
+        
+        /*var ballShape = SCNSphere(radius: 0.1)
+        var ballNode = SCNNode(geometry: ballShape)
+        ballNode.position = position
+        sceneView.scene.rootNode.addChildNode(ballNode)*/
+    }
+
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -78,20 +152,6 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    func checkThroughHomeBeanArray(identifier: String){
-        if homeBeanArray.count != 0 {
-            for x in 0..<homeBeanArray.count {
-                let homebeanInfoInQuestion = homeBeanArray[x]
-                let keywordArray = homebeanInfoInQuestion.keyword
-                for y in 0..<keywordArray.count {
-                    let keyword = keywordArray[y]
-                    if keyword == identifier {
-                        print("\(identifier) !!! its in house bean database!!!")
-                    }
-                }
-            }
-        }
-    }
     func loadInArray(completion: @escaping (_ succes: Bool)->()){
         if homeBeanArray.count == 0 {
             DatabaseManager.shared.homebeanArrayFromFirebase { (itemInfoArray) in
@@ -116,33 +176,43 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         }
         
     }
-
+    
     func useDataForDisplays(_ results: [Any]) {
         for observation in results where observation is VNRecognizedObjectObservation {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                 continue
             }
             print(objectObservation.labels.count)
-            //let topLableObservation = objectObservation.labels[0]
-            //for x in 0..<4{
-                let observation = objectObservation.labels[0]
-                let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
+            let observation = objectObservation.labels[0]
             
-            checkThroughHomeBeanArray(identifier: observation.identifier)
-                let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
-                
-                let textLayer = self.createTextSubLayerInBounds(objectBounds, identifier: observation.identifier, confidence: observation.confidence)
-                
-                print(observation.identifier)
-            //}
+            let identifier = observation.identifier
+            if homeBeanArray.count != 0 {
+                for x in 0..<homeBeanArray.count {
+                    let homebeanInfoInQuestion = homeBeanArray[x]
+                    let keywordArray = homebeanInfoInQuestion.keyword
+                    for y in 0..<keywordArray.count {
+                        let keyword = keywordArray[y]
+                        if keyword == identifier {
+                            
+                            
+                            infoViewController.infoFill = homeBeanArray[x].info
+                            infoViewController.titleFill = homeBeanArray[x].title
+                            
+                            homeBeanArray[x].keyword.remove(at: y)
+                            let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
+                            let point = objectBounds.origin
+                            hitTestWithPoint(point: point)
+                            
+                            
+                            print("\(identifier) !!! its in house bean database!!!")
+                        }
+                    }
+                }
+            }
             
-            //print(topLableObservation.identifier)
+            print(observation.identifier)
         }
-        /*for x in 0..<results.count{
-            print(results[x])
-        }*/
     }
-    
     
     func updateCoreML() {
         ///////////////////////////
@@ -196,13 +266,3 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         return shapeLayer
     }
 }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */

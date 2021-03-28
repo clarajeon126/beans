@@ -13,7 +13,12 @@
 		850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF551260F8E1A00FFFAA3 /* Main.storyboard */; };
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
+		85248C032610BE060093DD45 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85248C012610BE060093DD45 /* InfoViewController.swift */; };
+		85248C042610BE060093DD45 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85248C022610BE060093DD45 /* InfoViewController.xib */; };
 		8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */; };
+		8533F3F2261097DC00AE9D28 /* ClickableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F1261097DC00AE9D28 /* ClickableView.swift */; };
+		8533F3F62610B58600AE9D28 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F52610B58600AE9D28 /* InfoView.swift */; };
+		8533F3F82610B59500AE9D28 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8533F3F72610B59500AE9D28 /* InfoView.xib */; };
 		8574471D260FAE300015B42B /* Pods_beans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; };
 		8574471E260FAE300015B42B /* Pods_beans.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8574473C260FE0E60015B42B /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */; };
@@ -66,7 +71,12 @@
 		850CF554260F8E1C00FFFAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85248C012610BE060093DD45 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		85248C022610BE060093DD45 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
+		8533F3F1261097DC00AE9D28 /* ClickableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableView.swift; sourceTree = "<group>"; };
+		8533F3F52610B58600AE9D28 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		8533F3F72610B59500AE9D28 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		8574473B260FE0E60015B42B /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
 		8574473E260FE69C0015B42B /* SpecificBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBookmarkViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +223,11 @@
 			children = (
 				85744740260FE9940015B42B /* BookmarkData.swift */,
 				8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */,
+				8533F3F1261097DC00AE9D28 /* ClickableView.swift */,
+				8533F3F72610B59500AE9D28 /* InfoView.xib */,
+				8533F3F52610B58600AE9D28 /* InfoView.swift */,
+				85248C012610BE060093DD45 /* InfoViewController.swift */,
+				85248C022610BE060093DD45 /* InfoViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -296,8 +311,10 @@
 				8592B864260F939F00E6CA3A /* Bookmark.storyboard in Resources */,
 				850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */,
 				850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */,
+				8533F3F82610B59500AE9D28 /* InfoView.xib in Resources */,
 				850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */,
 				8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */,
+				85248C042610BE060093DD45 /* InfoViewController.xib in Resources */,
 				850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,12 +374,15 @@
 				850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */,
 				8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */,
 				8592B855260F933200E6CA3A /* ChemBeanViewController.swift in Sources */,
+				8533F3F62610B58600AE9D28 /* InfoView.swift in Sources */,
 				8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */,
 				8592B858260F933D00E6CA3A /* HomeBeanViewController.swift in Sources */,
 				85744741260FE9940015B42B /* BookmarkData.swift in Sources */,
+				8533F3F2261097DC00AE9D28 /* ClickableView.swift in Sources */,
 				8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */,
 				85744743260FEC3B0015B42B /* GlobalVariables.swift in Sources */,
 				8574475D2610486A0015B42B /* YOLOv3Tiny.mlmodel in Sources */,
+				85248C032610BE060093DD45 /* InfoViewController.swift in Sources */,
 				8592B86E260F949F00E6CA3A /* RecommendationsViewController.swift in Sources */,
 				8592B85E260F936300E6CA3A /* HomeViewController.swift in Sources */,
 				8592B871260F94AB00E6CA3A /* BookmarkViewController.swift in Sources */,
