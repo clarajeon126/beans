@@ -14,11 +14,13 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     
+    public var homeBeanArray: [ItemInfo] = []
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //set up ar scene
         sceneView.delegate = self
@@ -46,7 +48,11 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         }
         self.visionRequests = [classificationRequest]
         
-        loopCoreMLUpdate()
+        loadInArray { (success) in
+            if success {
+                self.loopCoreMLUpdate()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,6 +77,33 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+
+    func checkThroughHomeBeanArray(identifier: String){
+        if homeBeanArray.count != 0 {
+            for x in 0..<homeBeanArray.count {
+                let homebeanInfoInQuestion = homeBeanArray[x]
+                let keywordArray = homebeanInfoInQuestion.keyword
+                for y in 0..<keywordArray.count {
+                    let keyword = keywordArray[y]
+                    if keyword == identifier {
+                        print("\(identifier) !!! its in house bean database!!!")
+                    }
+                }
+            }
+        }
+    }
+    func loadInArray(completion: @escaping (_ succes: Bool)->()){
+        if homeBeanArray.count == 0 {
+            DatabaseManager.shared.homebeanArrayFromFirebase { (itemInfoArray) in
+                for x in 0..<itemInfoArray.count{
+                    print(itemInfoArray[x].title)
+                }
+                self.homeBeanArray = itemInfoArray
+                completion(true)
+            }
+        }
+    }
+    
     func loopCoreMLUpdate() {
         // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
         
@@ -94,7 +127,8 @@ class HomeBeanViewController: UIViewController, ARSCNViewDelegate {
             //for x in 0..<4{
                 let observation = objectObservation.labels[0]
                 let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
-                
+            
+            checkThroughHomeBeanArray(identifier: observation.identifier)
                 let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
                 
                 let textLayer = self.createTextSubLayerInBounds(objectBounds, identifier: observation.identifier, confidence: observation.confidence)

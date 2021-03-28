@@ -13,6 +13,7 @@
 		850CF553260F8E1A00FFFAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF551260F8E1A00FFFAA3 /* Main.storyboard */; };
 		850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850CF554260F8E1C00FFFAA3 /* Assets.xcassets */; };
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
+		8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */; };
 		8574471D260FAE300015B42B /* Pods_beans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; };
 		8574471E260FAE300015B42B /* Pods_beans.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8574473C260FE0E60015B42B /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		850CF554260F8E1C00FFFAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850CF557260F8E1C00FFFAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
 		8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		8574473B260FE0E60015B42B /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
 		8574473E260FE69C0015B42B /* SpecificBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBookmarkViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				85744740260FE9940015B42B /* BookmarkData.swift */,
+				8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */,
 				8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */,
 				8592B855260F933200E6CA3A /* ChemBeanViewController.swift in Sources */,
+				8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */,
 				8592B858260F933D00E6CA3A /* HomeBeanViewController.swift in Sources */,
 				85744741260FE9940015B42B /* BookmarkData.swift in Sources */,
 				8592B851260F932400E6CA3A /* ArtBeanViewController.swift in Sources */,
