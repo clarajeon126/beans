@@ -24,7 +24,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            tohomeButton.layer.cornerRadius = tohomeButton.frame.width / 2.2
+            //tohomeButton.layer.cornerRadius = tohomeButton.frame.width / 2.2
             //set up ar scene
             sceneView.delegate = self
             sceneView.showsStatistics = false

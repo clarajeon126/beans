@@ -33,7 +33,7 @@ class ArtBeanViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.scene = scene
         
-        guard let selectedModel = try? VNCoreMLModel(for: artType().model) else {
+        guard let selectedModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
             fatalError("error model would not load")
         }
         
