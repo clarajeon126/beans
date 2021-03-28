@@ -19,10 +19,24 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVn-bz-gYP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMl-Zx-btx">
+                                <rect key="frame" x="15" y="49" width="83" height="83"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XMl-Zx-btx" secondAttribute="height" id="MWS-Af-sS2"/>
+                                </constraints>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-xH-DGb">
+                                <rect key="frame" x="25" y="59" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d7u-fR-I11"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XMl-Zx-btx" firstAttribute="width" secondItem="TVn-bz-gYP" secondAttribute="width" multiplier="0.2" id="9Tf-AK-BYD"/>
+                            <constraint firstItem="XMl-Zx-btx" firstAttribute="leading" secondItem="d7u-fR-I11" secondAttribute="leading" constant="15" id="WfA-MG-gyh"/>
+                            <constraint firstItem="XMl-Zx-btx" firstAttribute="top" secondItem="d7u-fR-I11" secondAttribute="top" constant="5" id="cXC-pm-WHG"/>
                             <constraint firstItem="TVn-bz-gYP" firstAttribute="leading" secondItem="d7u-fR-I11" secondAttribute="leading" id="foc-X7-Vid"/>
                             <constraint firstItem="TVn-bz-gYP" firstAttribute="trailing" secondItem="d7u-fR-I11" secondAttribute="trailing" id="ogx-AY-f8o"/>
                             <constraint firstItem="TVn-bz-gYP" firstAttribute="top" secondItem="H0A-Uy-2yS" secondAttribute="top" id="wow-t9-9kJ"/>
@@ -30,7 +44,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="TVn-bz-gYP" id="Whs-Es-kKk"/>
+                        <outlet property="sceneView" destination="TVn-bz-gYP" id="jrg-x1-vva"/>
+                        <outlet property="toHomeButton" destination="ohe-xH-DGb" id="r0Z-91-02o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuB-at-3ki" sceneMemberID="firstResponder"/>
@@ -39,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="singlebean" width="683" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

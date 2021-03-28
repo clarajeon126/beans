@@ -15,6 +15,7 @@
 		850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850CF556260F8E1C00FFFAA3 /* LaunchScreen.storyboard */; };
 		85248C032610BE060093DD45 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85248C012610BE060093DD45 /* InfoViewController.swift */; };
 		85248C042610BE060093DD45 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85248C022610BE060093DD45 /* InfoViewController.xib */; };
+		85248C062610D01D0093DD45 /* artType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 85248C052610D01D0093DD45 /* artType.mlmodel */; };
 		8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */; };
 		8533F3F2261097DC00AE9D28 /* ClickableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F1261097DC00AE9D28 /* ClickableView.swift */; };
 		8533F3F62610B58600AE9D28 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F52610B58600AE9D28 /* InfoView.swift */; };
@@ -73,6 +74,7 @@
 		850CF559260F8E1C00FFFAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85248C012610BE060093DD45 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		85248C022610BE060093DD45 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		85248C052610D01D0093DD45 /* artType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = artType.mlmodel; sourceTree = "<group>"; };
 		8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
 		8533F3F1261097DC00AE9D28 /* ClickableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableView.swift; sourceTree = "<group>"; };
 		8533F3F52610B58600AE9D28 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				8592B83F260F91A200E6CA3A /* GoogleService-Info.plist */,
 				850CF54B260F8E1A00FFFAA3 /* AppDelegate.swift */,
 				8574475C261048690015B42B /* YOLOv3Tiny.mlmodel */,
+				85248C052610D01D0093DD45 /* artType.mlmodel */,
 				8592B876260F951400E6CA3A /* Resources */,
 				8592B843260F926D00E6CA3A /* View Controllers */,
 				8592B842260F925100E6CA3A /* Storyboards */,
@@ -370,6 +373,7 @@
 			files = (
 				8574473F260FE69C0015B42B /* SpecificBookmarkViewController.swift in Sources */,
 				8592B874260F94FA00E6CA3A /* BeanPickerViewController.swift in Sources */,
+				85248C062610D01D0093DD45 /* artType.mlmodel in Sources */,
 				8592B878260F952700E6CA3A /* DatabaseManager.swift in Sources */,
 				850CF550260F8E1A00FFFAA3 /* ViewController.swift in Sources */,
 				8592B85B260F934900E6CA3A /* ItemHistoBeanViewController.swift in Sources */,
