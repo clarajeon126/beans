@@ -50,11 +50,44 @@ class HomeViewController: UIViewController {
         recommendations.layer.shadowColor = CGColor(red: 249.0/255.0, green: 207.0/255.0, blue: 44.0/255.0, alpha: 1.0)
         
        
+        let newBookmark = BookmarkData(bean: 0, title: "title 1", info: "info blah blah blah")
+        let newBookmark1 = BookmarkData(bean: 1, title: "title 2", info: "info blah blah blah")
+        let newBookmark2 = BookmarkData(bean: 2, title: "title 3", info: "info blah blah blah")
+        let newBookmark3 = BookmarkData(bean: 3, title: "title 4", info: "info blah blah blah")
+        let newBookmark4 = BookmarkData(bean: 0, title: "title 5", info: "info blah blah blah")
+        
+        let bookMarkArrayTemp: [BookmarkData] = [newBookmark, newBookmark1, newBookmark2, newBookmark3, newBookmark4]
+        
+
+        storeBookMarkArrayToUserDefaults(bmArray: bookMarkArrayTemp)
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
 
-    
+    func storeBookMarkArrayToUserDefaults(bmArray: [BookmarkData]){
+        var titleArray: [String] = []
+        var beanArray: [Int] = []
+        var infoArray: [String] = []
+        var dateArray: [String] = []
+        //var imageArray: [UIImage] = []
+        
+        for x in 0..<bmArray.count{
+            titleArray.append(bmArray[x].title)
+            beanArray.append(bmArray[x].bean)
+            infoArray.append(bmArray[x].info)
+            dateArray.append(bmArray[x].date)
+            //imageArray.append(bmArray[x].image)
+        }
+        
+        UserDefaults.standard.setValue(titleArray, forKey: "titleArray")
+        UserDefaults.standard.setValue(beanArray, forKey: "beanArray")
+        UserDefaults.standard.setValue(infoArray, forKey: "infoArray")
+        UserDefaults.standard.setValue(dateArray, forKey: "dateArray")
+        //UserDefaults.standard.setValue(imageArray, forKey: "imageArray")
+    }
     /*
     // MARK: - Navigation
 

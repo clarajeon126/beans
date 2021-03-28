@@ -1,5 +1,5 @@
 //
-//  BookmarkViewController.swift
+//  SpecificBookmarkViewController.swift
 //  beans
 //
 //  Created by Clara Jeon on 3/27/21.
@@ -7,19 +7,31 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController {
+class SpecificBookmarkViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var backgroundView: UIView!
     
-    @IBOutlet weak var bookmarkTableView: UITableView!
-    @IBOutlet weak var backToHomeButton: UIButton!
+    var numInArray: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        backToHomeButton.layer.cornerRadius = backToHomeButton.frame.width / 2
-        bookmarkTableView.delegate = self
-        bookmarkTableView.dataSource = self
-        bookmarkTableView.register(UINib(nibName: "BookmarksTableViewCell", bundle: nil), forCellReuseIdentifier: "bookmarkCell")
+        // Do any additional setup after loading the view.
+        var bookmarkArray = returnDefaultBookMarkArray()
+        
+        
+        //set the view controller as whatever value
+        let bookmarkInQuestion = bookmarkArray[numInArray ?? 0]
+        
+        backgroundView.backgroundColor = beanColorArray[bookmarkInQuestion.bean]
+        
+        titleLabel.text = bookmarkInQuestion.title
+        infoLabel.text = bookmarkInQuestion.info
+        dateLabel.text = bookmarkInQuestion.date
+        //imageView.image = bookmarkInQuestion.image
         
     }
     
@@ -44,7 +56,6 @@ class BookmarkViewController: UIViewController {
         }
         return bookmarkArray
     }
-    
 
     /*
     // MARK: - Navigation
@@ -56,32 +67,4 @@ class BookmarkViewController: UIViewController {
     }
     */
 
-}
-extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
-   
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let bookmarkArray = returnDefaultBookMarkArray()
-        return bookmarkArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bookmarkArray = returnDefaultBookMarkArray()
-        let cell = bookmarkTableView.dequeueReusableCell(withIdentifier: "bookmarkCell") as! BookmarksTableViewCell
-        
-        let bookmarkData = bookmarkArray[indexPath.row]
-        
-        cell.titleLabel.text = bookmarkData.title
-        
-        cell.bgView.backgroundColor = beanColorArray[bookmarkData.bean]
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
-    }
-    
-    
 }
