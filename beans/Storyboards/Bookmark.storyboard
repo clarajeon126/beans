@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +47,7 @@
                     <connections>
                         <outlet property="backToHomeButton" destination="98u-8Y-wL1" id="OuF-VU-MeM"/>
                         <outlet property="bookmarkTableView" destination="Lv2-q1-Ee4" id="BlT-Do-xfe"/>
-                        <segue destination="6n3-F7-0XS" kind="presentation" id="Nm9-YS-ixn"/>
+                        <segue destination="6n3-F7-0XS" kind="presentation" identifier="toSpecificBookmark" id="Nm9-YS-ixn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl9-nV-eMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,6 +70,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2j-an-z3l">
+                                <rect key="frame" x="83" y="115" width="248" height="505"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8Q-uW-PIt">
                                 <rect key="frame" x="30" y="740.5" width="354" height="37.5"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="17"/>
@@ -94,21 +96,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2j-an-z3l">
-                                <rect key="frame" x="64.5" y="115" width="285" height="615.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="k2j-an-z3l" secondAttribute="height" multiplier="290:627" id="UTR-Ge-WGM"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eEP-91-31W"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RNR-EW-qWu" firstAttribute="leading" secondItem="eEP-91-31W" secondAttribute="leading" constant="30" id="2YC-52-gGx"/>
-                            <constraint firstItem="l8Q-uW-PIt" firstAttribute="top" secondItem="k2j-an-z3l" secondAttribute="bottom" constant="10" id="G7v-af-bby"/>
+                            <constraint firstItem="k2j-an-z3l" firstAttribute="height" secondItem="mXQ-U6-WEw" secondAttribute="height" multiplier="0.6" id="7ad-RJ-MGT"/>
                             <constraint firstItem="eEP-91-31W" firstAttribute="trailing" secondItem="l8Q-uW-PIt" secondAttribute="trailing" constant="30" id="Gut-yT-vR3"/>
                             <constraint firstItem="l8Q-uW-PIt" firstAttribute="leading" secondItem="eEP-91-31W" secondAttribute="leading" constant="30" id="OuI-uh-rdO"/>
                             <constraint firstItem="eEP-91-31W" firstAttribute="trailing" secondItem="RNR-EW-qWu" secondAttribute="trailing" constant="30" id="ZVX-a2-IOO"/>
+                            <constraint firstItem="k2j-an-z3l" firstAttribute="width" secondItem="mXQ-U6-WEw" secondAttribute="width" multiplier="0.6" id="b2Z-kv-vVc"/>
                             <constraint firstItem="RNR-EW-qWu" firstAttribute="top" secondItem="eEP-91-31W" secondAttribute="top" constant="30" id="faw-ht-Spe"/>
                             <constraint firstItem="k2j-an-z3l" firstAttribute="top" secondItem="RNR-EW-qWu" secondAttribute="bottom" constant="10" id="hAM-QP-gPH"/>
                             <constraint firstItem="k2j-an-z3l" firstAttribute="centerX" secondItem="mXQ-U6-WEw" secondAttribute="centerX" id="rqq-qf-sGE"/>
@@ -130,8 +127,5 @@
     </scenes>
     <resources>
         <image name="singlebean" width="683" height="512"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

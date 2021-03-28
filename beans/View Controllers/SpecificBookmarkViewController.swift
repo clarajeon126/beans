@@ -28,10 +28,12 @@ class SpecificBookmarkViewController: UIViewController {
         
         backgroundView.backgroundColor = beanColorArray[bookmarkInQuestion.bean]
         
+        print(bookmarkInQuestion.title)
+       
         titleLabel.text = bookmarkInQuestion.title
         infoLabel.text = bookmarkInQuestion.info
         dateLabel.text = bookmarkInQuestion.date
-        //imageView.image = bookmarkInQuestion.image
+        imageView.image = bookmarkInQuestion.image
         
     }
     
@@ -40,7 +42,7 @@ class SpecificBookmarkViewController: UIViewController {
         let beanArray = UserDefaults.standard.array(forKey: "beanArray") as! [Int]
         let infoArray = UserDefaults.standard.stringArray(forKey: "infoArray")
         let dateArray = UserDefaults.standard.stringArray(forKey: "dateArray")
-        //let imageArray = UserDefaults.standard.array(forKey: "imageArray") as! [UIImage]
+        let imageArray = UserDefaults.standard.array(forKey: "imageArray") as! [Data]
         
         var bookmarkArray: [BookmarkData] = []
         for x in 0..<titleArray!.count {
@@ -48,9 +50,9 @@ class SpecificBookmarkViewController: UIViewController {
             let bean1 = beanArray[x]
             let info1 = infoArray![x]
             let date1 = dateArray![x]
-            //let image1 = imageArray[x]
+            let image1 = UIImage(data: imageArray[x])
             
-            let bookmark = BookmarkData(bean: bean1, title: title1, info: info1, date: date1)
+            let bookmark = BookmarkData(bean: bean1, title: title1, info: info1, date: date1, image: image1!)
             
             bookmarkArray.append(bookmark)
         }

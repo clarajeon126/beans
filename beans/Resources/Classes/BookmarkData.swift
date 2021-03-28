@@ -13,7 +13,7 @@ public class BookmarkData {
     var title: String
     var info: String
     var date: String
-    //var image: UIImage
+    var image: UIImage
     
     init(bean: Int, title: String, info: String){
         self.bean = bean
@@ -27,14 +27,14 @@ public class BookmarkData {
         let formattedDate = dateFormatter.string(from: date)
         self.date = formattedDate.lowercased()
         
-        //self.image = #imageLiteral(resourceName: "item histo bean")
+        self.image = #imageLiteral(resourceName: "item histo bean")
     }
     
-    init(bean: Int, title: String, info: String, date: String){
+    init(bean: Int, title: String, info: String, date: String, image: UIImage){
         self.bean = bean
         self.title = title
         self.info = info
         self.date = date
-        //self.image = image
+        self.image = image
     }
 }

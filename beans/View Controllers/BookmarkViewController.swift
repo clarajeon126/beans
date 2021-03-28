@@ -28,7 +28,7 @@ class BookmarkViewController: UIViewController {
         let beanArray = UserDefaults.standard.array(forKey: "beanArray") as! [Int]
         let infoArray = UserDefaults.standard.stringArray(forKey: "infoArray")
         let dateArray = UserDefaults.standard.stringArray(forKey: "dateArray")
-        //let imageArray = UserDefaults.standard.array(forKey: "imageArray") as! [UIImage]
+        let imageArray = UserDefaults.standard.array(forKey: "imageArray") as! [Data]
         
         var bookmarkArray: [BookmarkData] = []
         for x in 0..<titleArray!.count {
@@ -36,9 +36,9 @@ class BookmarkViewController: UIViewController {
             let bean1 = beanArray[x]
             let info1 = infoArray![x]
             let date1 = dateArray![x]
-            //let image1 = imageArray[x]
+            let image1 = UIImage(data: imageArray[x])
             
-            let bookmark = BookmarkData(bean: bean1, title: title1, info: info1, date: date1)
+            let bookmark = BookmarkData(bean: bean1, title: title1, info: info1, date: date1, image: image1!)
             
             bookmarkArray.append(bookmark)
         }
@@ -83,5 +83,15 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
         return 90
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toSpecificBookmark", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSpecificBookmark" {
+            let indexPath = bookmarkTableView.indexPathForSelectedRow
+            let specificVC = segue.destination as! SpecificBookmarkViewController
+            specificVC.numInArray = indexPath?.row as! Int
+        }
+    }
 }

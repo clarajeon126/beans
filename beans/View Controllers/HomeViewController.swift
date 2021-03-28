@@ -72,21 +72,23 @@ class HomeViewController: UIViewController {
         var beanArray: [Int] = []
         var infoArray: [String] = []
         var dateArray: [String] = []
-        //var imageArray: [UIImage] = []
+        var imageArray: [Data] = []
         
         for x in 0..<bmArray.count{
             titleArray.append(bmArray[x].title)
             beanArray.append(bmArray[x].bean)
             infoArray.append(bmArray[x].info)
             dateArray.append(bmArray[x].date)
-            //imageArray.append(bmArray[x].image)
+            let image = bmArray[x].image
+            let dataImage = image.pngData()
+            imageArray.append(dataImage!)
         }
         
         UserDefaults.standard.setValue(titleArray, forKey: "titleArray")
         UserDefaults.standard.setValue(beanArray, forKey: "beanArray")
         UserDefaults.standard.setValue(infoArray, forKey: "infoArray")
         UserDefaults.standard.setValue(dateArray, forKey: "dateArray")
-        //UserDefaults.standard.setValue(imageArray, forKey: "imageArray")
+        UserDefaults.standard.setValue(imageArray, forKey: "imageArray")
     }
     /*
     // MARK: - Navigation
