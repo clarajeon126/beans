@@ -12,13 +12,13 @@ class InfoViewController: UIViewController {
     @IBAction func bookmarkTapped(_ sender: Any) {
         
         print("pressed bookmarks")
-        var storedBookmarks = returnDefaultBookMarkArray()
+        /*var storedBookmarks = returnDefaultBookMarkArray()
         
         let newBookMark = BookmarkData(bean: beanNum ?? 0, title: titleFill ?? "no title", info: infoFill ?? "info")
         storedBookmarks.append(newBookMark)
         
         var newBookmarkArray = storedBookmarks
-        storeBookMarkArrayToUserDefaults(bmArray: newBookmarkArray)
+        storeBookMarkArrayToUserDefaults(bmArray: newBookmarkArray)*/
         
     }
     @IBOutlet weak var titleLabel: UILabel!

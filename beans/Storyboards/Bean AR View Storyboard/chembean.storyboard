@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="m7p-42-Zjo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="DtV-UB-ZCe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsF-DN-cVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-314"/>
+        </scene>
         <!--Chem Bean View Controller-->
         <scene sceneID="zfv-9f-RCp">
             <objects>
@@ -25,6 +33,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bBh-f6-zhR" secondAttribute="height" id="J10-Nc-jcz"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="toHomeButtonTapped:" destination="Fag-1A-74I" eventType="touchUpInside" id="OUQ-EI-BEh"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singlebean" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-Y1-Yvd">
                                 <rect key="frame" x="25" y="59" width="63" height="63"/>
@@ -45,6 +56,8 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="HmG-lH-kYl" id="bX4-P4-bvx"/>
+                        <outlet property="toHomeButton" destination="bBh-f6-zhR" id="1uH-an-lRp"/>
+                        <segue destination="DtV-UB-ZCe" kind="presentation" identifier="fromChemToHome" modalPresentationStyle="fullScreen" id="6cq-BV-QnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOb-m1-K3k" sceneMemberID="firstResponder"/>

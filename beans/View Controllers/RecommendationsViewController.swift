@@ -102,6 +102,7 @@ class RecommendationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.hideKeyboardWhenTappedAround()
         recommendTextView.delegate = self
         recommendTextView.layer.cornerRadius = 10
         
@@ -121,5 +122,15 @@ class RecommendationsViewController: UIViewController {
 }
 
 extension RecommendationsViewController: UITextViewDelegate {
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
