@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
         let bookMarkArrayTemp: [BookmarkData] = [newBookmark, newBookmark1, newBookmark2, newBookmark3, newBookmark4]
         
 
-        storeBookMarkArrayToUserDefaults(bmArray: bookMarkArrayTemp)
+        //storeBookMarkArrayToUserDefaults(bmArray: bookMarkArrayTemp)
         
         
         

@@ -174,8 +174,10 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
             guard let objectObservation = results[0] as? VNRecognizedObjectObservation else {
                 return
             }
+            
             print(objectObservation)
             print(objectObservation.labels.count)
+            
             let observation = objectObservation.labels[0]
             
             let identifier = observation.identifier
@@ -185,8 +187,8 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                 
                 //go through each element in the array
                 var x = 0
-                
                 var xTemp = -1
+                
                 while x < chemBeanArray.count && x != xTemp && !foundOneIn {
                     print("\(x) \(xTemp)")
                     xTemp = x
@@ -207,6 +209,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                             
                             foundOneIn = true
                             oneInQuestionObjectName = identifier
+                            
                             /*var infoing : [ItemInfo] = []
                              
                              for x in 0..<chemBeanArray.count{
@@ -261,15 +264,11 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                 x += 1
                             }
                             
-                            
                             y += 1
                         }
                     }
-                    
-                    
                 }
             }
-            
             print(observation.identifier)
         }
     }
