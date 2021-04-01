@@ -97,6 +97,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             
+            print("addd view controller as scene")
             material.diffuse.contents = self.infoViewController.view
             
         }
@@ -216,6 +217,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                              infoing.append(chemBeanArray[x])
                              }*/
                             
+                            print(chemBeanArray[x].info)
                             findInfo(from: chemBeanArray[x].info) { [self] (stringArray) in
                                 var displayInfo = ""
                                 
@@ -226,6 +228,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                 
                                 print(displayInfo)
                                 
+                                /*
                                 //fill in the info
                                 infoViewController.infoFill = displayInfo
                                 
@@ -233,11 +236,21 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                 infoViewController.titleFill = chemBeanArray[x].title
                                 
                                 //set bean number
-                                infoViewController.beanNum = 1
+                                infoViewController.beanNum = 1*/
                                 
                                 
                                 DispatchQueue.main.async {
                                     //display the info in ar
+                                    //fill in the info
+                                    infoViewController.infoFill = displayInfo
+                                    
+                                    print("display view in dispatch!! \(displayInfo)")
+                                    //fill in the title
+                                    infoViewController.titleFill = chemBeanArray[x].title
+                                    
+                                    //set bean number
+                                    infoViewController.beanNum = 1
+                                    
                                     let num = y
                                     print("inside dispath queue")
                                     let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
