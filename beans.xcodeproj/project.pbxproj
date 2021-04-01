@@ -20,7 +20,6 @@
 		8533F3EF26107DDE00AE9D28 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */; };
 		8533F3F2261097DC00AE9D28 /* ClickableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F1261097DC00AE9D28 /* ClickableView.swift */; };
 		8533F3F62610B58600AE9D28 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533F3F52610B58600AE9D28 /* InfoView.swift */; };
-		8533F3F82610B59500AE9D28 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8533F3F72610B59500AE9D28 /* InfoView.xib */; };
 		8574471D260FAE300015B42B /* Pods_beans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; };
 		8574471E260FAE300015B42B /* Pods_beans.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D73BBB529554C9A2AA0BF823 /* Pods_beans.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8574473C260FE0E60015B42B /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */; };
@@ -80,7 +79,6 @@
 		8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
 		8533F3F1261097DC00AE9D28 /* ClickableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableView.swift; sourceTree = "<group>"; };
 		8533F3F52610B58600AE9D28 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		8533F3F72610B59500AE9D28 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		8574473A260FE0E60015B42B /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		8574473B260FE0E60015B42B /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
 		8574473E260FE69C0015B42B /* SpecificBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBookmarkViewController.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				85744740260FE9940015B42B /* BookmarkData.swift */,
 				8533F3EE26107DDE00AE9D28 /* ItemInfo.swift */,
 				8533F3F1261097DC00AE9D28 /* ClickableView.swift */,
-				8533F3F72610B59500AE9D28 /* InfoView.xib */,
 				8533F3F52610B58600AE9D28 /* InfoView.swift */,
 				85248C012610BE060093DD45 /* InfoViewController.swift */,
 				85248C022610BE060093DD45 /* InfoViewController.xib */,
@@ -317,7 +314,6 @@
 				8592B864260F939F00E6CA3A /* Bookmark.storyboard in Resources */,
 				850CF54E260F8E1A00FFFAA3 /* art.scnassets in Resources */,
 				850CF558260F8E1C00FFFAA3 /* LaunchScreen.storyboard in Resources */,
-				8533F3F82610B59500AE9D28 /* InfoView.xib in Resources */,
 				850CF555260F8E1C00FFFAA3 /* Assets.xcassets in Resources */,
 				8592B845260F92A900E6CA3A /* artbean.storyboard in Resources */,
 				85248C042610BE060093DD45 /* InfoViewController.xib in Resources */,
@@ -547,13 +543,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T675PC557V;
+				DEVELOPMENT_TEAM = DRMM28PHS5;
 				INFOPLIST_FILE = beans/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "clara-jeon.beans";
+				PRODUCT_BUNDLE_IDENTIFIER = "hellie-chen.beans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -569,13 +565,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T675PC557V;
+				DEVELOPMENT_TEAM = DRMM28PHS5;
 				INFOPLIST_FILE = beans/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "clara-jeon.beans";
+				PRODUCT_BUNDLE_IDENTIFIER = "hellie-chen.beans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
