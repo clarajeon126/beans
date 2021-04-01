@@ -89,8 +89,8 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     func createInfo(position : SCNVector3){
         
         //create plane
-        let planeGeometry = SCNPlane(width: 0.414,
-                                     height: 0.3)
+        let planeGeometry = SCNPlane(width: 0.225,
+                                     height: 0.25)
         
         //create A New Material that is a view controller
         let material = SCNMaterial()
@@ -107,7 +107,10 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.position = position
         
+        planeNode.opacity = 0.75
+        
         planeNode.geometry?.firstMaterial = material
+        
         
         sceneView.scene.rootNode.addChildNode(planeNode)
     }

@@ -9,6 +9,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var numPressed = 0
     @IBAction func bookmarkTapped(_ sender: Any) {
         
         print("pressed bookmarks")
@@ -27,9 +28,37 @@ class InfoViewController: UIViewController {
         
     }
     
+    @IBAction func expandButtonTapped(_ sender: Any) {
+        
+        let changeToAppear = numPressed % 2 == 0
+        
+        if infoView.isHidden {
+            infoView.isHidden = false
+            
+            //backgroundView.layer.cornerRadius = 0
+            //self.view.frame = CGRect(x: 0, y: 0, width: 450, height: 500)
+            
+        }
+        else {
+            //self.view.frame = CGRect(x: 0, y: 0, width: 450, height: 100)
+            infoView.isHidden = true
+        }
+        
+        numPressed += 1
+    }
+    
+    @IBOutlet var overallView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBOutlet weak var infoView: UIView!
+    
+    @IBOutlet weak var titleBackGroundView: UIView!
+    
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
+    @IBOutlet weak var expandButton: UIButton!
     
     @IBOutlet weak var backgroundView: UIView!
     var titleFill: String?
@@ -39,11 +68,40 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = titleFill
         
-        infoLabel.text = infoFill
-        backgroundView.backgroundColor = beanColorArray[beanNum ?? 0]
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //set title and inf
+        titleLabel.text = titleFill
+        infoLabel.text = infoFill
+        
+        //set above bg
+        backgroundView.backgroundColor = beanColorArray[beanNum ?? 0]
+        
+        //set below bg
+        infoView.backgroundColor = beanColorArray[beanNum ?? 0]
+        
+        //set title label bg
+        titleBackGroundView.backgroundColor = beanLighterColorArray[beanNum ?? 0]
+        
+        
+        //set info label bg
+        infoLabel.backgroundColor = beanLighterColorArray[beanNum ?? 0]
+        
+        //set rounded corners
+        bookmarkButton.layer.cornerRadius = bookmarkButton.frame.width / 2
+        expandButton.layer.cornerRadius = expandButton.frame.width / 2
+        titleBackGroundView.layer.cornerRadius = titleBackGroundView.frame.height / 2
+        
+        infoLabel.layer.cornerRadius = infoLabel.frame.height / 2
+    
+        //set background cornerRadius
+        backgroundView.layer.cornerRadius = 10
+        infoView.layer.cornerRadius = 10
     }
 
     func returnDefaultBookMarkArray() -> [BookmarkData] {
