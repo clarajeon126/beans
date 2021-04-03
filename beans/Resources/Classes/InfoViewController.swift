@@ -75,6 +75,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
+        print(titleFill)
         //set title and inf
         titleLabel.text = titleFill
         infoLabel.text = infoFill
