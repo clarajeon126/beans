@@ -226,10 +226,12 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                 
                                 for x in 0..<stringArray.count {
                                     displayInfo.append(stringArray[x])
-                                    
+    
                                 }
-                                
-                                
+                                //comment out if this goes wrong
+                                /*for x in 0..<chemBeanArray.count{
+                                    displayInfo.append(chemBeanArray[x].info)
+                                }*/
                                 
                                 print(displayInfo)
                                 
