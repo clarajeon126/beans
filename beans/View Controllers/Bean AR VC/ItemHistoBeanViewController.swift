@@ -12,6 +12,7 @@ import Vision
 
 class ItemHistoBeanViewController: UIViewController, ARSCNViewDelegate {
 
+    @IBOutlet weak var sceneView: ARSCNView!
     public var itemBeanArray: [ItemInfo] = []
     
     let infoViewController = InfoViewController()
