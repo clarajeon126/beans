@@ -18,7 +18,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     
     public var chemBeanArray: [ItemInfo] = []
     
-    let infoViewController = InfoViewController()
+    //let infoViewController = InfoViewController()
     
     var oneInQuestionObjectName = ""
     var visionRequests = [VNRequest]()
@@ -74,19 +74,19 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    func hitTestWithPoint(point: CGPoint){
+    func hitTestWithPoint(point: CGPoint, infoViewController: InfoViewController){
         let result = sceneView.hitTest(point, types: [ARHitTestResult.ResultType.featurePoint])
         guard let hitResult = result.last else{
             return
         }
         let hitTransform = SCNMatrix4.init(hitResult.worldTransform)
         let hitVector = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
-        createInfo(position: hitVector)
+        createInfo(position: hitVector, infoViewController: infoViewController)
     }
     
     
     
-    func createInfo(position : SCNVector3){
+    func createInfo(position : SCNVector3, infoViewController: InfoViewController){
         
         //create plane
         let planeGeometry = SCNPlane(width: 0.225,
@@ -98,7 +98,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             
             print("addd view controller as scene")
-            material.diffuse.contents = self.infoViewController.view
+            material.diffuse.contents = infoViewController.view
             
         }
         
@@ -247,21 +247,24 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                 DispatchQueue.main.async {
                                     //display the info in ar
                                     //fill in the info
-                                    infoViewController.infoFill = displayInfo
+                                    
+                                    let infoVC = InfoViewController();
+                                    
+                                    infoVC.infoFill = displayInfo
                                     
                                     print("display view in dispatch!! \(displayInfo)")
                                     //fill in the title
-                                    infoViewController.titleFill = chemBeanArray[x].title
+                                    infoVC.titleFill = chemBeanArray[x].title
                                     
                                     //set bean number
-                                    infoViewController.beanNum = 1
+                                    infoVC.beanNum = 1
                                     
                                     let num = y
                                     print("inside dispath queue")
                                     let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
                                     let point = objectBounds.origin
                                     
-                                    hitTestWithPoint(point: point)
+                                    hitTestWithPoint(point: point, infoViewController: infoVC)
                                     chemBeanArray[x].keyword.remove(at: num)
                                     
                                     
