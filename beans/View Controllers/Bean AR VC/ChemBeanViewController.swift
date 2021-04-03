@@ -229,6 +229,8 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                     
                                 }
                                 
+                                
+                                
                                 print(displayInfo)
                                 
                                 /*
