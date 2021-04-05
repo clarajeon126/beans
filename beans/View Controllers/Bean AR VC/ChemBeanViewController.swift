@@ -22,12 +22,17 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     
     var oneInQuestionObjectName = ""
     var visionRequests = [VNRequest]()
+    
+    var chemInfoVCArray:[InfoViewController] = []
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     
-    
+    //-1 not accessed, 0 true, 1 false
+    var viewControllerCreated = -1
     @IBAction func toHomeButtonTapped(_ sender: Any) {
-        sceneView.session.pause()
+        self.sceneView = ARSCNView()
+        //sceneView.session.pause()
         
+        print("button tapped")
         //hasLeft = true
         
         dispatchQueueML.suspend()
@@ -36,6 +41,9 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         toHomeButton.layer.cornerRadius = toHomeButton.frame.width / 2.2
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         //set up ar scene
         sceneView.delegate = self
         sceneView.showsStatistics = false
@@ -46,7 +54,6 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         
         guard let selectedModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
             fatalError("error model would not load")
-            
             
         }
         
@@ -74,19 +81,19 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    func hitTestWithPoint(point: CGPoint, infoViewController: InfoViewController){
+    func hitTestWithPoint(point: CGPoint){
         let result = sceneView.hitTest(point, types: [ARHitTestResult.ResultType.featurePoint])
         guard let hitResult = result.last else{
             return
         }
         let hitTransform = SCNMatrix4.init(hitResult.worldTransform)
         let hitVector = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
-        createInfo(position: hitVector, infoViewController: infoViewController)
+        createInfo(position: hitVector)
     }
     
     
     
-    func createInfo(position : SCNVector3, infoViewController: InfoViewController){
+    func createInfo(position : SCNVector3){
         
         //create plane
         let planeGeometry = SCNPlane(width: 0.225,
@@ -97,9 +104,9 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             
+            self.viewControllerCreated = 0
             print("addd view controller as scene")
-            material.diffuse.contents = infoViewController.view
-            
+            material.diffuse.contents = self.chemInfoVCArray.last?.view
         }
         
         //create node for place
@@ -128,7 +135,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    /*override func viewDidDisappear(_ animated: Bool) {
         sceneView.session.pause()
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -136,7 +143,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -187,8 +194,9 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
             let identifier = observation.identifier
             
             
-            if chemBeanArray.count != 0 && !foundOneIn && oneInQuestionObjectName != identifier{
+            if chemBeanArray.count != 0 && !foundOneIn && oneInQuestionObjectName != identifier && viewControllerCreated < 1{
                 
+                viewControllerCreated = 1
                 //go through each element in the array
                 var x = 0
                 var xTemp = -1
@@ -264,7 +272,8 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
                                     let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(sceneView.frame.width), Int(sceneView.frame.height))
                                     let point = objectBounds.origin
                                     
-                                    hitTestWithPoint(point: point, infoViewController: infoVC)
+                                    chemInfoVCArray.append(infoVC)
+                                    hitTestWithPoint(point: point)
                                     chemBeanArray[x].keyword.remove(at: num)
                                     
                                     
