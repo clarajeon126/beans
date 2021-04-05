@@ -229,9 +229,7 @@ class ChemBeanViewController: UIViewController, ARSCNViewDelegate {
     
                                 }
                                 //comment out if this goes wrong
-                                for x in 0..<chemBeanArray.count{
-                                    displayInfo.append(chemBeanArray[x].info)
-                                }
+                                displayInfo.append(chemBeanArray[0].info)
                                 
                                 print(displayInfo)
                                 
